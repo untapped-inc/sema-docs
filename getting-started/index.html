@@ -327,6 +327,27 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#running-the-dashboard-client" title="Running the dashboard client" class="md-nav__link">
+    Running the dashboard client
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-the-pos-client" title="Running the POS client" class="md-nav__link">
+    Running the POS client
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#where-to-go-from-here" title="Where to go from here" class="md-nav__link">
+    Where to go from here
+  </a>
+  
+</li>
+      
       
       
       
@@ -343,6 +364,102 @@
   
 </nav>
     
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../deploying-to-production/" title="Deploying to Production" class="md-nav__link">
+      Deploying to Production
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../the-database-schema/" title="The Database Schema" class="md-nav__link">
+      The Database Schema
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../the-rest-api-server/" title="The REST API Server" class="md-nav__link">
+      The REST API Server
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../the-dashboard-client/" title="The Dashboard Client" class="md-nav__link">
+      The Dashboard Client
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../the-pos-client/" title="The POS Client" class="md-nav__link">
+      The POS Client
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../release-notes/" title="Release Notes" class="md-nav__link">
+      Release Notes
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../contributing/" title="Contributing" class="md-nav__link">
+      Contributing
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../license/" title="License" class="md-nav__link">
+      License
+    </a>
   </li>
 
     
@@ -410,6 +527,27 @@
         <li class="md-nav__item">
   <a href="#running-the-server" title="Running the server" class="md-nav__link">
     Running the server
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-the-dashboard-client" title="Running the dashboard client" class="md-nav__link">
+    Running the dashboard client
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-the-pos-client" title="Running the POS client" class="md-nav__link">
+    Running the POS client
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#where-to-go-from-here" title="Where to go from here" class="md-nav__link">
+    Where to go from here
   </a>
   
 </li>
@@ -638,6 +776,7 @@
 </td></tr></table>
 
 <p>Your database is now ready.</p>
+<p>To learn more about the database schema, please <a href="/the-database-schema">click here</a>.</p>
 <h2 id="configurations">Configurations<a class="headerlink" href="#configurations" title="Permanent link">&para;</a></h2>
 <p>Before you can start running the clients and the server, you will need to first set the property values in the configuration file.</p>
 <div class="admonition info">
@@ -693,9 +832,89 @@
 </table>
 <div class="admonition danger">
 <p class="admonition-title">Danger</p>
-<p>We <strong>Strongly</strong> recommend you not to push the <code class="codehilite"><span class="na">.env</span></code> file to your repository after adding the correct configuration property values. For security measures, we added it to the project's <code class="codehilite"><span class="na">.gitignore</span></code> file so that git can always ignore it. So you would need to really want to push it to be able to do so.</p>
+<p>We <strong>Strongly</strong> recommend that you do not to push the <code class="codehilite"><span class="na">.env</span></code> file to your repository after adding the correct configuration property values. For security measures, we added it to the project's <code class="codehilite"><span class="na">.gitignore</span></code> file so that git can always ignore it. So you would need to really want to push it to be able to do so.</p>
 </div>
 <h2 id="running-the-server">Running the server<a class="headerlink" href="#running-the-server" title="Permanent link">&para;</a></h2>
+<p>Now that your database and your configurations are setup. Let's run the server, shall we?</p>
+<ul>
+<li>Move into the <code class="codehilite">report_server</code> directory: <code class="codehilite">cd report_server</code></li>
+<li>Install dependencies: <code class="codehilite">yarn</code></li>
+<li>Run the server: <code class="codehilite">yarn start</code></li>
+</ul>
+<p>It should start running at http://localhost:3001</p>
+<p>Let's test that it's running fine with curl:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>curl http://localhost:3001/untapped/health-check
+</pre></div>
+</td></tr></table>
+
+<p>It should return something like: <code class="codehilite">{&quot;server&quot;:&quot;Ok&quot;,&quot;database&quot;:&quot;Ok&quot;,&quot;version&quot;:&quot;0.0.1.4&quot;,&quot;schema&quot;:&quot;sema_core&quot;}</code></p>
+<p>The version number may vary.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The clients are configured to access the server on port 3001.</p>
+</div>
+<p>To learn more about the REST API server, please <a href="/the-rest-api-server">click here</a>.</p>
+<h2 id="running-the-dashboard-client">Running the dashboard client<a class="headerlink" href="#running-the-dashboard-client" title="Permanent link">&para;</a></h2>
+<p>Now it's time to run the dashboard client. Here are the steps to follow:</p>
+<ul>
+<li>Move into the <code class="codehilite">report_client</code> directory: <code class="codehilite">cd report_client</code></li>
+<li>Install dependencies: <code class="codehilite">yarn</code></li>
+<li>Run the client: <code class="codehilite">yarn start</code></li>
+</ul>
+<p>It should start running at http://localhost:3000</p>
+<p>Notice the port numer: 3000</p>
+<p>Go to the above link and test the client by logging in with the user you created during the <a href="#setting-up-the-database">database setup</a>.</p>
+<p>To learn more about the dashboard client, please <a href="/the-dashboard-client">click here</a>.</p>
+<h2 id="running-the-pos-client">Running the POS client<a class="headerlink" href="#running-the-pos-client" title="Permanent link">&para;</a></h2>
+<p>Finally, let's run the POS client.</p>
+<ul>
+<li>Follow the Android setup steps at: https://facebook.github.io/react-native/docs/getting-started.html#content. Make sure you select the appropriate tabs in the instructions. "Building Projects with Native Code" "Development OS: macOS or Windows or Linux. Target OS: Android"</li>
+<li>Move into the mobile_client directory: <code class="codehilite">cd mobile_client</code></li>
+<li>Install dependencies: <code class="codehilite">yarn</code></li>
+<li>Create and open an emulator either by using <a href="https://www.genymotion.com">Genymotion</a> or the <a href="https://developer.android.com/studio/run/emulator">Android Studio ADB</a><ul>
+<li>Use at least a 7 inch tablet with a minimum Android version of 6.0.0</li>
+</ul>
+</li>
+<li>Start the app on the emulator: <code class="codehilite">react-native run-android</code></li>
+</ul>
+<p>You should get the Settings page. From there, fill up the form to make the connection between the mobile client and the server:</p>
+<table>
+<thead>
+<tr>
+<th>Settings Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SEMA Service URL</td>
+<td>The URL to the running server. Since we're on local, we just need to get the current IP address of our system using <code class="codehilite">ifconfig</code>. E.g.: http://192.168.1.7:3001. Notice the port number of the server at the end.</td>
+</tr>
+<tr>
+<td>Site</td>
+<td>The kiosk that we created during <a href="#setting-up-the-database">database setup</a>. E.g.: <code class="codehilite">Bois9</code></td>
+</tr>
+<tr>
+<td>Username or Email</td>
+<td>This is the user we just used to login to the dashboard client. E.g. <code class="codehilite">Administrator</code></td>
+</tr>
+<tr>
+<td>Password</td>
+<td>The password of the above user E.g. <code class="codehilite">diueh89ndys</code></td>
+</tr>
+</tbody>
+</table>
+<p>Then choose a language and press the <code class="codehilite">Connect</code> button. It should connect successfully and you will be able to test the whole app.</p>
+<p>To learn more about the POS client, please <a href="/the-pos-client">click here</a>.</p>
+<h2 id="where-to-go-from-here">Where to go from here<a class="headerlink" href="#where-to-go-from-here" title="Permanent link">&para;</a></h2>
+<p>And that's it folks. You now have the whole platform running successfully on your own computer. Here are some useful links to go from here:</p>
+<ul>
+<li><a href="/the-database-schema">The Database Schema</a></li>
+<li><a href="/the-rest-api-server">The REST API Server</a></li>
+<li><a href="/the-dashboard-client">The Dashboard client</a></li>
+<li><a href="/the-pos-client">The POS client</a></li>
+</ul>
+<p>Feel free to leave a comment down below for further questions and clarifications.</p>
 <div class="footnote">
 <hr />
 <ol>
@@ -703,7 +922,7 @@
 <p>No hard feelings Windows users but your system is a pain for developers&#160;<a class="footnote-backref" href="#fnref:windows-users" rev="footnote" title="Jump back to footnote 1 in the text">&#8617;</a></p>
 </li>
 <li id="fn:db-password">
-<p>Hopefully you didn't use this password while installing MySQL. But we won't judge you if you did ;)&#160;<a class="footnote-backref" href="#fnref:db-password" rev="footnote" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+<p>Hopefully you didn't use this password while setting up MySQL. But we won't judge you if you did ;)&#160;<a class="footnote-backref" href="#fnref:db-password" rev="footnote" title="Jump back to footnote 2 in the text">&#8617;</a></p>
 </li>
 <li id="fn:using-root">
 <p>Don't tell anyone we told you that! Seriously though, if it's on a personal computer and not a server, it's fine.&#160;<a class="footnote-backref" href="#fnref:using-root" rev="footnote" title="Jump back to footnote 3 in the text">&#8617;</a></p>
@@ -762,6 +981,20 @@
             </div>
           </a>
         
+        
+          <a href="../deploying-to-production/" title="Deploying to Production" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Deploying to Production
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
         
       </nav>
     </div>
