@@ -154,7 +154,7 @@ Before you can start running the clients and the server, you will need to first 
 
 First, rename this file from `.example-env` to `.env`: `cp .example-env .env`
 
-Now open this `.env` file using your favorite text editor. These properties provide the necessary details for the clients and the server to access the database and setup a few dependencies.
+Now open this `.env` file using your favorite text editor. These properties provide the necessary details for the clients and the server to access the database and setup a few dependencies. Use the DB credentials you created while installing and setting up MySQL.
 
 | Property Name            | Description                                            |
 | ------------------------ | --------------------------------------------------     |
