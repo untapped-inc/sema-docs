@@ -1,0 +1,20 @@
+.md-header {
+	background-image: -webkit-linear-gradient(#04519b, #044687 20%, #033769);
+    background-image: -o-linear-gradient(#04519b, #044687 20%, #033769);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#04519b), color-stop(20%, #044687), to(#033769));
+    background-image: linear-gradient(#04519b, #044687 20%, #033769);
+    background-repeat: no-repeat;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff04519b', endColorstr='#ff033769', GradientType=0);
+    -webkit-filter: none;
+    filter: none;
+    border-bottom: 1px solid #022241;
+}
+
+.md-main a {
+    color: #2858A7;
+}
+
+.md-main a:hover {
+    color: #2858A7;
+    opacity: .75;
+}
