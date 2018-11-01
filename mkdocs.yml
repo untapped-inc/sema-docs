@@ -1,6 +1,7 @@
 site_name: 'SEMA Technical Documentation'
 site_description: 'System for Emerging Market Analytics'
 site_author: 'Untapped, Inc.'
+site_url: 'https://untapped-inc.github.io/sema-docs/'
 copyright: 'Copyright &copy; 2018 Untapped, Inc.'
 
 theme:
