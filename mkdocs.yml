@@ -1,0 +1,37 @@
+site_name: 'SEMA Technical Documentation'
+site_description: 'System for Emerging Market Analytics'
+site_author: 'Untapped, Inc.'
+copyright: 'Copyright &copy; 2018 Untapped, Inc.'
+
+theme:
+  name: 'material'
+  custom_dir: 'theme'
+  favicon: 'assets/images/untapped-favicon.png'
+  logo: 'assets/images/untapped-favicon.png'
+
+extra:
+  social:
+    - type: 'globe'
+      link: 'http://semawater.org'
+    - type: 'github'
+      link: 'https://github.com/untapped-inc/sema-core'
+
+markdown_extensions:
+  - admonition
+  - codehilite:
+      linenums: true
+  - toc:
+      permalink: true
+  - footnotes
+  - pymdownx.inlinehilite
+  - pymdownx.mark
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+nav:
+  - Introduction: index.md
+  - Getting Started: getting-started.md
+
+extra_css: [assets/stylesheets/style.css]
+repo_name: 'untapped-inc/sema-core'
+repo_url: 'https://github.com/untapped-inc/sema-core/'
