@@ -145,6 +145,8 @@ VALUES (2, 1, 1, 2, '4000.00', 'UGX', '2000.00');
 
 Your database is now ready.
 
+To learn more about the database schema, please [click here](/the-database-schema).
+
 ## Configurations
 
 Before you can start running the clients and the server, you will need to first set the property values in the configuration file.
@@ -169,10 +171,82 @@ Now open this `.env` file using your favorite text editor. These properties prov
 | BCRYPT_SALT_ROUNDS       | How much time is needed to calculate a single BCrypt hash - Between 8 and 12 is recommended. Used for encrypting passwords for users. E.g. `10` |
 
 !!! danger
-    We **Strongly** recommend you not to push the `.env` file to your repository after adding the correct configuration property values. For security measures, we added it to the project's `.gitignore` file so that git can always ignore it. So you would need to really want to push it to be able to do so.
+    We **Strongly** recommend that you do not to push the `.env` file to your repository after adding the correct configuration property values. For security measures, we added it to the project's `.gitignore` file so that git can always ignore it. So you would need to really want to push it to be able to do so.
 
 ## Running the server
 
+Now that your database and your configurations are setup. Let's run the server, shall we?
+
+* Move into the `report_server` directory: `cd report_server`
+* Install dependencies: `yarn`
+* Run the server: `yarn start`
+
+It should start running at http://localhost:3001
+
+Let's test that it's running fine with curl:
+```
+curl http://localhost:3001/untapped/health-check
+```
+It should return something like: `{"server":"Ok","database":"Ok","version":"0.0.1.4","schema":"sema_core"}`
+
+The version number may vary.
+
+!!! note
+    The clients are configured to access the server on port 3001.
+
+To learn more about the REST API server, please [click here](/the-rest-api-server).
+
+## Running the dashboard client
+
+Now it's time to run the dashboard client. Here are the steps to follow:
+
+* Move into the `report_client` directory: `cd report_client`
+* Install dependencies: `yarn`
+* Run the client: `yarn start`
+
+It should start running at http://localhost:3000
+
+Notice the port numer: 3000
+
+Go to the above link and test the client by logging in with the user you created during the [database setup](#setting-up-the-database).
+
+To learn more about the dashboard client, please [click here](/the-dashboard-client).
+
+## Running the POS client
+
+Finally, let's run the POS client.
+
+* Follow the Android setup steps at: https://facebook.github.io/react-native/docs/getting-started.html#content. Make sure you select the appropriate tabs in the instructions. "Building Projects with Native Code" "Development OS: macOS or Windows or Linux. Target OS: Android"
+* Move into the mobile_client directory: `cd mobile_client`
+* Install dependencies: `yarn`
+* Create and open an emulator either by using [Genymotion](https://www.genymotion.com) or the [Android Studio ADB](https://developer.android.com/studio/run/emulator)
+    * Use at least a 7 inch tablet with a minimum Android version of 6.0.0
+* Start the app on the emulator: `react-native run-android`
+
+You should get the Settings page. From there, fill up the form to make the connection between the mobile client and the server:
+
+| Settings Field          | Description                                            |
+| ------------------------ | --------------------------------------------------     |
+| SEMA Service URL         | The URL to the running server. Since we're on local, we just need to get the current IP address of our system using `ifconfig`. E.g.: http://192.168.1.7:3001. Notice the port number of the server at the end. |
+| Site                  | The kiosk that we created during [database setup](#setting-up-the-database). E.g.: `Bois9`             |
+| Username or Email        | This is the user we just used to login to the dashboard client. E.g. `Administrator` |
+| Password                | The password of the above user E.g. `diueh89ndys` |
+
+Then choose a language and press the `Connect` button. It should connect successfully and you will be able to test the whole app.
+
+To learn more about the POS client, please [click here](/the-pos-client).
+
+## Where to go from here
+
+And that's it folks. You now have the whole platform running successfully on your own computer. Here are some useful links to go from here:
+
+* [The Database Schema](/the-database-schema)
+* [The REST API Server](/the-rest-api-server)
+* [The Dashboard client](/the-dashboard-client)
+* [The POS client](/the-pos-client)
+
+Feel free to leave a comment down below for further questions and clarifications.
+
 [^windows-users]: No hard feelings Windows users but your system is a pain for developers
-[^db-password]: Hopefully you didn't use this password while installing MySQL. But we won't judge you if you did ;)
+[^db-password]: Hopefully you didn't use this password while setting up MySQL. But we won't judge you if you did ;)
 [^using-root]: Don't tell anyone we told you that! Seriously though, if it's on a personal computer and not a server, it's fine.
