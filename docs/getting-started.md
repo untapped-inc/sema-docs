@@ -236,10 +236,11 @@ Then choose a language and press the `Connect` button. It should connect success
 
 To learn more about the POS client, please [click here](/the-pos-client).
 
-## Where to go from here
+## Where to go from here?
 
-And that's it folks. You now have the whole platform running successfully on your own computer. Here are some useful links to go from here:
+And that's it folks. You now have the whole platform running successfully on your own computer for testing and/or developing purposes. Here are some useful links to go to from here:
 
+* [Deploying to Production](/deploying-to-production)
 * [The Database Schema](/the-database-schema)
 * [The REST API Server](/the-rest-api-server)
 * [The Dashboard client](/the-dashboard-client)
