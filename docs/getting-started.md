@@ -145,7 +145,7 @@ VALUES (2, 1, 1, 2, '4000.00', 'UGX', '2000.00');
 
 Your database is now ready.
 
-To learn more about the database schema, please [click here](/the-database-schema).
+To learn more about the database schema, please [click here](/sema-docs/the-database-schema).
 
 ## Configurations
 
@@ -194,7 +194,7 @@ The version number may vary.
 !!! note
     The clients are configured to access the server on port 3001.
 
-To learn more about the REST API server, please [click here](/the-rest-api-server).
+To learn more about the REST API server, please [click here](/sema-docs/rest-api/overview).
 
 ## Running the dashboard client
 
@@ -210,7 +210,7 @@ Notice the port numer: 3000
 
 Go to the above link and test the client by logging in with the user you created during the [database setup](#setting-up-the-database).
 
-To learn more about the dashboard client, please [click here](/the-dashboard-client).
+To learn more about the dashboard client, please [click here](/sema-docs/dashboard/overview).
 
 ## Running the POS client
 
@@ -234,17 +234,17 @@ You should get the Settings page. From there, fill up the form to make the conne
 
 Then choose a language and press the `Connect` button. It should connect successfully and you will be able to test the whole app.
 
-To learn more about the POS client, please [click here](/the-pos-client).
+<!-- To learn more about the POS client, please [click here](/the-pos-client). -->
 
 ## Where to go from here?
 
 And that's it folks. You now have the whole platform running successfully on your own computer for testing and/or developing purposes. Here are some useful links to go to from here:
 
-* [Deploying to Production](/deploying-to-production)
-* [The Database Schema](/the-database-schema)
-* [The REST API Server](/the-rest-api-server)
-* [The Dashboard client](/the-dashboard-client)
-* [The POS client](/the-pos-client)
+* [Deploying to Production](/sema-docs/deploying-to-production)
+* [The Database Schema](/sema-docs/the-database-schema)
+* [The REST API Server](/sema-docs/rest-api/overview)
+* [The Dashboard client](/sema-docs/dashboard/overview)
+<!-- * [The POS client](/the-pos-client) -->
 
 Feel free to leave a comment down below for further questions and clarifications.
 
