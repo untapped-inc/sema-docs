@@ -4,7 +4,7 @@ disqus: sema-docs
 
 This section is a tutorial on how to deploy the system in production mode. The previous section was about running it locally and we strongly recommend that you go through the process before you start with this one because they have a lot in common.
 
-In fact, we will not go over some details that we covered in that section, so please, [go through it](/getting-started) if you haven't done so yet.
+In fact, we will not go over some details that we covered in that section, so please, [go through it](/sema-docs/getting-started) if you haven't done so yet.
 
 In production mode, the dashboard server runs on sema.untapped-inc.com and the React app is built then rendered by the server. REST calls from the app to the server are reverse proxied by Ngninx from port 80 to port 3001. We use pm2 to run the server.
 
@@ -32,7 +32,7 @@ Follow those steps to deploy this app in production mode:
 6. Copy the entire build folder from react_client/build to the report_server/public_react folder:
      `cp -rf ./build ../report_server/public_react`
 7. Switch to server directory: `cd ../report_server`
-8. Follow [the instructions](/getting-started/#configurations) to create the environment variables file needed by the project
+8. Follow [the instructions](/sema-docs/getting-started/#configurations) to create the environment variables file needed by the project
 9. Install server dependencies: `yarn`
 10. Start the server with Pm2: `pm2 start bin/www --name sema-server`. Name it however you want so you can easily refer to it later
 11. Get your server IP address: `curl icanhazip.com`
