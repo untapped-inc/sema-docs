@@ -13,7 +13,7 @@
         <meta name="description" content="System for Emerging Market Analytics">
       
       
-        <link rel="canonical" href="https://untapped-inc.github.io/sema-docs/license/">
+        <link rel="canonical" href="https://untapped-inc.github.io/sema-docs/deploying-to-production-draft/">
       
       
         <meta name="author" content="Untapped, Inc.">
@@ -42,7 +42,7 @@
     
     
       
-        <title>License - SEMA Technical Documentation</title>
+        <title>Deploying to production <small>Things are getting serious</small> - SEMA Technical Documentation</title>
       
     
     
@@ -98,7 +98,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#license" tabindex="1" class="md-skip">
+      <a href="#deploying-to-production-things-are-getting-serious" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -124,7 +124,7 @@
                 SEMA Technical Documentation
               </span>
               <span class="md-header-nav__topic">
-                License
+                Deploying to production <small>Things are getting serious</small>
               </span>
             
           
@@ -791,20 +791,11 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-    <a href="./" title="License" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../license/" title="License" class="md-nav__link">
       License
     </a>
-    
   </li>
 
     
@@ -825,6 +816,56 @@
     
   
   
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" title="Prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deploying" title="Deploying" class="md-nav__link">
+    Deploying
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configurations" title="Configurations" class="md-nav__link">
+    Configurations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#building-the-dashboard-client" title="Building the dashboard client" class="md-nav__link">
+    Building the dashboard client
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#serving-the-api-and-the-dashboard-client" title="Serving the API and the dashboard client" class="md-nav__link">
+    Serving the API and the dashboard client
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -835,15 +876,52 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/untapped-inc/sema-docs/edit/master/docs/license.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/untapped-inc/sema-docs/edit/master/docs/deploying-to-production-draft.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="license">License<a class="headerlink" href="#license" title="Permanent link">&para;</a></h1>
-<p><strong>MIT License</strong></p>
-<p>Copyright © 2018 Untapped, Inc.</p>
-<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
-<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
-<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+                <h1 id="deploying-to-production-things-are-getting-serious">Deploying to production <small>Things are getting serious</small><a class="headerlink" href="#deploying-to-production-things-are-getting-serious" title="Permanent link">&para;</a></h1>
+<p>This section is a tutorial on how to deploy the system in production mode. The previous section was about running it locally and we strongly recommend that you go through the process before you start with this one because they have a lot in common.</p>
+<p>In fact, we will not go over some details that we covered in that section, so please, <a href="/getting-started">go through it</a> if you haven't done so yet.</p>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<ul>
+<li>A linux server - preferably Ubuntu - with SSH access. We use <a href="https://digitalocean.com">DigitalOcean</a>.</li>
+<li>Install nvm: Follow <a href="https://github.com/creationix/nvm#installation">this link</a> for instructions.</li>
+<li>Install latest LTS version of Node and npm: <code class="codehilite">nvm install --lts</code></li>
+<li>Install Yarn: <code class="codehilite">npm i -g yarn</code></li>
+<li>Install MySQL: Follow <a href="https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-16-04">this link for Ubuntu 16.04</a> Or find the right turorial for your version of Ubuntu.</li>
+<li>Install react-scripts (To be able to build the client): <code class="codehilite">yarn global add react-scripts</code></li>
+<li>Fork the project repo through Github: Follow <a href="https://help.github.com/articles/fork-a-repo/">this link</a> for instructions.</li>
+<li>Nginx (Reverse Proxy): <code class="codehilite">sudo apt install nginx</code></li>
+<li>Pm2 (Robust Process Manager): <code class="codehilite">yarn global add pm2</code></li>
+<li>Clone your new Git repo to your server: <code class="codehilite">git clone https://github.com/YOUR-USERNAME/sema-core.git</code> - Make sure to change <mark>YOUR-USERNAME</mark> to your Github username.</li>
+<li>Move into your new folder: <code class="codehilite">cd sema-core</code></li>
+<li>From this point on, we expect that you are in the root directory of the project.</li>
+</ul>
+<h2 id="deploying">Deploying<a class="headerlink" href="#deploying" title="Permanent link">&para;</a></h2>
+<p>Assuming you've installed all the necessary prerequisites <em>correctly</em>, let's get started.</p>
+<h3 id="configurations">Configurations<a class="headerlink" href="#configurations" title="Permanent link">&para;</a></h3>
+<p>Let's start by setting up the configuration file, follow the instructions in <a href="/getting-started/#configurations">this sub-section</a>.</p>
+<h3 id="building-the-dashboard-client">Building the dashboard client<a class="headerlink" href="#building-the-dashboard-client" title="Permanent link">&para;</a></h3>
+<p>Let's keep going by creating an optimized production build of the dashboard client:</p>
+<ul>
+<li>Move into the <code class="codehilite">report_client</code> directory: <code class="codehilite">cd report_client</code></li>
+<li>Install client dependencies: <code class="codehilite">yarn</code></li>
+<li>Build the client: <code class="codehilite">yarn build</code></li>
+</ul>
+<div class="admonition info">
+<p>If you get a fatal error about not having enough memory while building the client, just add this - <code class="codehilite">GENERATE_SOURCEMAP=false</code> - to the .env file of the <code class="codehilite">report_client</code> directory and then run yarn build again: <code class="codehilite">echo &#39;GENERATE_SOURCEMAP=false&#39; &gt;&gt; .env &amp;&amp; yarn build</code></p>
+</div>
+<ul>
+<li>Create a new <code class="codehilite">public_react</code> folder into the <code class="codehilite">report_server</code> directory: <code class="codehilite">mkdir ../report_server/public_react</code></li>
+<li>Copy the entire build folder from <code class="codehilite">report_client/build</code> to the <code class="codehilite">report_server/public_react</code> folder: <code class="codehilite">cp -rf ./build ../report_server/public_react</code></li>
+</ul>
+<h3 id="serving-the-api-and-the-dashboard-client">Serving the API and the dashboard client<a class="headerlink" href="#serving-the-api-and-the-dashboard-client" title="Permanent link">&para;</a></h3>
+<p>Now that we have the dashboard client ready to be served, let's:</p>
+<ul>
+<li>Switch to the <code class="codehilite">report_server</code> directory: <code class="codehilite">cd ../report_server</code></li>
+<li>Assuming you've <a href="/getting-started/#configurations">configured your <code class="codehilite"><span class="na">.env</span></code> file correctly</a>, install server dependencies: <code class="codehilite">yarn</code></li>
+<li></li>
+</ul>
                 
                   
                 
@@ -860,27 +938,6 @@
       
         
 <footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid">
-        
-          <a href="../release-notes/pos/0.0.8/" title="0.0.8" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
-            </div>
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                0.0.8
-              </span>
-            </div>
-          </a>
-        
-        
-      </nav>
-    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

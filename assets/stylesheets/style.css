@@ -10,11 +10,53 @@
     border-bottom: 1px solid #022241;
 }
 
-.md-main a {
+.md-main a, .md-nav__item--nested > .md-nav__link {
     color: #2858A7;
 }
 
 .md-main a:hover {
     color: #2858A7;
     opacity: .75;
+}
+
+.md-nav__link--active {
+    color: rgb(6, 38, 89) !important;
+}
+
+
+/* For the API METHOD buttons */
+.status-macro {
+	min-width: 76px;
+	padding: 2px 5px 1px;
+}
+
+.aui-lozenge {
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	color: #fff;
+	display: inline-block;
+	font-size: 11px;
+	font-weight: bold;
+	line-height: 99%;
+	margin: 0;
+	padding: 2px 5px;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.post-method {
+	background: rgb(0, 83, 128);
+}
+
+.get-method {
+	background: rgb(12, 120, 70);
+}
+
+.put-method {
+	background: rgb(132, 12, 143);
+}
+
+.delete-method {
+	background: rgb(154, 18, 31);
 }
