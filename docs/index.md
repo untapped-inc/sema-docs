@@ -8,7 +8,7 @@ See the <a href="http://semawater.org" target="_blank">official home page</a> fo
 
 [Click here](/sema-docs/getting-started) to quickly get started.
 
-## Join our Community!
+## Join our Community Chat!
 
 !!! note ""
     This documentation will not be complete without a community and we strongly urge you to join us over at Gitter - you can use your Github account to login - for any questions and suggestions that you may have:
