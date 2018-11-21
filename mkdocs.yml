@@ -2,6 +2,7 @@ site_name: 'SEMA Technical Documentation'
 site_description: 'System for Emerging Market Analytics'
 site_author: 'Untapped, Inc.'
 site_url: 'https://untapped-inc.github.io/sema-docs/'
+edit_uri: 'https://github.com/untapped-inc/sema-docs/edit/master/docs/'
 copyright: 'Copyright &copy; 2018 Untapped, Inc.'
 
 theme:
@@ -34,11 +35,42 @@ nav:
   - Getting Started: getting-started.md
   - Deploying to Production: deploying-to-production.md
   - The Database Schema: the-database-schema.md
-  - The REST API Server: the-rest-api-server.md
-  - The Dashboard Client: the-dashboard-client.md
-  - The POS Client: the-pos-client.md
-  - Release Notes: release-notes.md
-  - Contributing: contributing.md
+  - The REST API Server:
+    - Overview: rest-api/overview.md
+    - General:
+      - sema/health-check: rest-api/general/health-check.md
+      - sema/login: rest-api/general/login.md
+      - sema/kiosks: rest-api/general/kiosks.md
+      - sema/products: rest-api/general/products.md
+      - sema/sales-channels: rest-api/general/sales-channels.md
+      - sema/customer-types: rest-api/general/customer-types.md
+    - Point of Sale (POS) specific:
+      - sema/site/customers: rest-api/pos/customers.md
+      - sema/site/receipts: rest-api/pos/receipts.md
+      - sema/site/product-mrps: rest-api/pos/product-mrps.md
+    - Dashboard/Reports specific:
+      - sema/dashboard/site/customer-summary: rest-api/dashboard/customer-summary.md
+      - sema/dashboard/site/receipt-summary: rest-api/dashboard/receipt-summary.md
+      - sema/dashboard/site/sales-summary: rest-api/dashboard/sales-summary.md
+      - sema/dashboard/site/water-summary: rest-api/dashboard/water-summary.md
+      - sema/dashboard/site/water-chart: rest-api/dashboard/water-chart.md
+  - The Dashboard Client:
+    - Overview: dashboard/overview.md
+    - Redux: dashboard/redux.md
+    - Water Operations: dashboard/water-operations.md
+    - Sales: dashboard/sales.md
+    - Volumes: dashboard/volumes.md
+    - Demographics: dashboard/demographics.md
+  # - The POS Client: the-pos-client.md
+  - Release Notes:
+    - Dashboard:
+      - 0.0.0.7: release-notes/dashboard/0.0.0.7.md
+    - POS:
+      - 0.4.2: release-notes/pos/0.4.2.md
+      - 0.3.2: release-notes/pos/0.3.2.md
+      - 0.3.1: release-notes/pos/0.3.1.md
+      - 0.0.8: release-notes/pos/0.0.8.md
+  # - Contributing: contributing.md
   - License: license.md
 
 extra_css: [assets/stylesheets/style.css]
