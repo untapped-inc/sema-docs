@@ -34,6 +34,7 @@ nav:
   - Introduction: index.md
   - Getting Started: getting-started.md
   - Deploying to Production: deploying-to-production.md
+  # - Keeping your repo in harmony with the SEMA core repo: staying-in-harmony.md
   - The Database Schema: the-database-schema.md
   - The REST API Server:
     - Overview: rest-api/overview.md
