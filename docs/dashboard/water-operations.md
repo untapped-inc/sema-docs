@@ -10,7 +10,7 @@ specified, the water operations  for the date filter period is shown.
 Shows water production as "**501759 liters, Wed Jan 31, 2018**".
  If there is no Date filter, total water production up to the current 
 date is displayed. Otherwise production for the period selected by the 
-date filter is displayed.
+date filter is displayed. Water production is calculated from the "Volume" parameter at the sampling site "B:Product:"
 
 The service endpoint is **/sema/dashboard/site/water-summary**
 
