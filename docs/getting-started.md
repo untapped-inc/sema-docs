@@ -216,10 +216,13 @@ To learn more about the dashboard client, please [click here](/sema-docs/dashboa
 
 Finally, let's run the POS client.
 
-* Follow the Android setup steps at: https://facebook.github.io/react-native/docs/getting-started.html#content. Make sure you select the appropriate tabs in the instructions. "Building Projects with Native Code" "Development OS: macOS or Windows or Linux. Target OS: Android"
+* Follow the Android setup steps at [the official react native  docs](https://facebook.github.io/react-native/docs/getting-started.html#content). Make sure you select the appropriate tabs in the instructions.
+    * "Building Projects with Native Code"
+    * "Development OS: macOS or Windows or Linux.
+    * Target OS: Android"
 * Move into the mobile_client directory: `cd mobile_client`
 * Install dependencies: `yarn`
-* Create and open an emulator either by using [Genymotion](https://www.genymotion.com) or the [Android Studio ADB](https://developer.android.com/studio/run/emulator)
+* Create and open an emulator either by using [Genymotion](https://www.genymotion.com) or the [Android Studio AVD](https://developer.android.com/studio/run/emulator)
     * Use at least a 7 inch tablet with a minimum Android version of 6.0.0
 * Start the app on the emulator: `react-native run-android`
 
