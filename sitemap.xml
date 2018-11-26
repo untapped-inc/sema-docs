@@ -2,157 +2,157 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
      <loc>https://untapped-inc.github.io/sema-docs/</loc>
-     <lastmod>2018-11-21</lastmod>
+     <lastmod>2018-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://untapped-inc.github.io/sema-docs/getting-started/</loc>
-     <lastmod>2018-11-21</lastmod>
+     <lastmod>2018-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://untapped-inc.github.io/sema-docs/deploying-to-production/</loc>
-     <lastmod>2018-11-21</lastmod>
+     <lastmod>2018-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://untapped-inc.github.io/sema-docs/the-database-schema/</loc>
-     <lastmod>2018-11-21</lastmod>
+     <lastmod>2018-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://untapped-inc.github.io/sema-docs/rest-api/overview/</loc>
-     <lastmod>2018-11-21</lastmod>
+     <lastmod>2018-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://untapped-inc.github.io/sema-docs/rest-api/general/health-check/</loc>
-     <lastmod>2018-11-21</lastmod>
+     <lastmod>2018-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://untapped-inc.github.io/sema-docs/rest-api/general/login/</loc>
-     <lastmod>2018-11-21</lastmod>
+     <lastmod>2018-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://untapped-inc.github.io/sema-docs/rest-api/general/kiosks/</loc>
-     <lastmod>2018-11-21</lastmod>
+     <lastmod>2018-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://untapped-inc.github.io/sema-docs/rest-api/general/products/</loc>
-     <lastmod>2018-11-21</lastmod>
+     <lastmod>2018-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://untapped-inc.github.io/sema-docs/rest-api/general/sales-channels/</loc>
-     <lastmod>2018-11-21</lastmod>
+     <lastmod>2018-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://untapped-inc.github.io/sema-docs/rest-api/general/customer-types/</loc>
-     <lastmod>2018-11-21</lastmod>
+     <lastmod>2018-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://untapped-inc.github.io/sema-docs/rest-api/pos/customers/</loc>
-     <lastmod>2018-11-21</lastmod>
+     <lastmod>2018-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://untapped-inc.github.io/sema-docs/rest-api/pos/receipts/</loc>
-     <lastmod>2018-11-21</lastmod>
+     <lastmod>2018-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://untapped-inc.github.io/sema-docs/rest-api/pos/product-mrps/</loc>
-     <lastmod>2018-11-21</lastmod>
+     <lastmod>2018-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://untapped-inc.github.io/sema-docs/rest-api/dashboard/customer-summary/</loc>
-     <lastmod>2018-11-21</lastmod>
+     <lastmod>2018-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://untapped-inc.github.io/sema-docs/rest-api/dashboard/receipt-summary/</loc>
-     <lastmod>2018-11-21</lastmod>
+     <lastmod>2018-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://untapped-inc.github.io/sema-docs/rest-api/dashboard/sales-summary/</loc>
-     <lastmod>2018-11-21</lastmod>
+     <lastmod>2018-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://untapped-inc.github.io/sema-docs/rest-api/dashboard/water-summary/</loc>
-     <lastmod>2018-11-21</lastmod>
+     <lastmod>2018-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://untapped-inc.github.io/sema-docs/rest-api/dashboard/water-chart/</loc>
-     <lastmod>2018-11-21</lastmod>
+     <lastmod>2018-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://untapped-inc.github.io/sema-docs/dashboard/overview/</loc>
-     <lastmod>2018-11-21</lastmod>
+     <lastmod>2018-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://untapped-inc.github.io/sema-docs/dashboard/redux/</loc>
-     <lastmod>2018-11-21</lastmod>
+     <lastmod>2018-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://untapped-inc.github.io/sema-docs/dashboard/water-operations/</loc>
-     <lastmod>2018-11-21</lastmod>
+     <lastmod>2018-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://untapped-inc.github.io/sema-docs/dashboard/sales/</loc>
-     <lastmod>2018-11-21</lastmod>
+     <lastmod>2018-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://untapped-inc.github.io/sema-docs/dashboard/volumes/</loc>
-     <lastmod>2018-11-21</lastmod>
+     <lastmod>2018-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://untapped-inc.github.io/sema-docs/dashboard/demographics/</loc>
-     <lastmod>2018-11-21</lastmod>
+     <lastmod>2018-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://untapped-inc.github.io/sema-docs/release-notes/dashboard/0.0.0.7/</loc>
-     <lastmod>2018-11-21</lastmod>
+     <lastmod>2018-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://untapped-inc.github.io/sema-docs/release-notes/pos/0.4.2/</loc>
-     <lastmod>2018-11-21</lastmod>
+     <lastmod>2018-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://untapped-inc.github.io/sema-docs/release-notes/pos/0.3.2/</loc>
-     <lastmod>2018-11-21</lastmod>
+     <lastmod>2018-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://untapped-inc.github.io/sema-docs/release-notes/pos/0.3.1/</loc>
-     <lastmod>2018-11-21</lastmod>
+     <lastmod>2018-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://untapped-inc.github.io/sema-docs/release-notes/pos/0.0.8/</loc>
-     <lastmod>2018-11-21</lastmod>
+     <lastmod>2018-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://untapped-inc.github.io/sema-docs/license/</loc>
-     <lastmod>2018-11-21</lastmod>
+     <lastmod>2018-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>
