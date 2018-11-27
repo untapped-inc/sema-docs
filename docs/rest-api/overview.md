@@ -40,3 +40,4 @@ This section documents the REST services offered by the SEMA endpoints. In the f
 | [sema/dashboard/site/sales-summary](/sema-docs/rest-api/dashboard/sales-summary/) | Summarizes sales data
 | [sema/dashboard/site/water-summary](/sema-docs/rest-api/dashboard/water-summary/)	| Sales data by vendor
 | [sema/dashboard/site/water-chart](/sema-docs/rest-api/dashboard/water-chart/) | Historical sales by sales distribution channel
+| [sema/dashboard/site/sales-by-channel-history](/sema-docs/rest-api/dashboard/sales-by-channel-history/) | Historical data on sales organized by sales channel
