@@ -56,7 +56,7 @@ If you want to do some more advanced stuffs, check out what the MkDocs theme we'
 
 ### Where are things located
 
-* All the configurations are handled through the `mkdocs.yml`. This is also where the navigation menu is handled.
+* All the configurations are handled through the `mkdocs.yml` file. This is also where the navigation menu is handled.
 * The `docs` directory contains all the pages. They are all in Markdown. All the directories and files have self explanatory names.
 * The intro page is at `docs/index.md`
 * `docs/assets` contains assets like images, extra CSS and extra JS - check the `extra_css` option from the `mkdocs.yml` file.
