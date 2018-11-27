@@ -62,4 +62,8 @@ If you want to do some more advanced stuffs, check out what the MkDocs theme we'
 * `docs/assets` contains assets like images, extra CSS and extra JS - check the `extra_css` option from the `mkdocs.yml` file.
 * The `theme` directory is [a way MkDocs provides to overwrite a part of the theme you're using](https://www.mkdocs.org/user-guide/styling-your-docs/#using-the-theme-custom_dir).
 
+### Building and deploying changes to Github
+
+Once you're done writing docs and you have admin rights on the repository, simply call `mkdocs gh-deploy` in the root directory of the project and it will build and deploy your changes to your project Github pages. In our case, that's <a href="https://untapped-inc.github.com/sema-docs/" target="_blank">https://untapped-inc.github.com/sema-docs/</a>
+
 [edit-icon]: section-edit-icon.png
