@@ -4,7 +4,7 @@ disqus: sema-docs
 
 This section is for those who decide to customize their version of SEMA but still want to receive particular updates from [the core repository](https://github.com/untapped-inc/sema-core/) without losing their changes in the long run.
 
-This section assumes you already have [a version of SEMA running in development mode](/sema-docs/getting-started/) and [one running in production mode](/sema-docs/deploying-to-production/). We'll also assume you customized your POS app by changing the name, the logos and/or have even added your own features to one or more parts of the system.
+This section assumes you already have [a version of SEMA running in development mode](/sema-docs/getting-started/) and [one running in production mode](/sema-docs/deploying-to-production/tutorial). We'll also assume you customized your POS app by changing the name, the logos and/or have even added your own features to one or more parts of the system.
 
 It's all fun and games, until you notice, from one of our release notes, that we added a new feature that you like.
 
