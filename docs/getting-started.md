@@ -243,7 +243,7 @@ Then choose a language and press the `Connect` button. It should connect success
 
 And that's it folks. You now have the whole platform running successfully on your own computer for testing and/or developing purposes. Here are some useful links to go to from here:
 
-* [Deploying to Production](/sema-docs/deploying-to-production)
+* [Deploying to Production](/sema-docs/deploying-to-production/tutorial)
 * [The Database Schema](/sema-docs/the-database-schema)
 * [The REST API Server](/sema-docs/rest-api/overview)
 * [The Dashboard client](/sema-docs/dashboard/overview)
