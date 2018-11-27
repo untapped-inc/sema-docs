@@ -64,6 +64,6 @@ If you want to do some more advanced stuffs, check out what the MkDocs theme we'
 
 ### Building and deploying changes to Github
 
-Once you're done writing docs and you have admin rights on the repository, simply call `mkdocs gh-deploy` in the root directory of the project and it will build and deploy your changes to your project Github pages. In our case, that's <a href="https://untapped-inc.github.com/sema-docs/" target="_blank">https://untapped-inc.github.com/sema-docs/</a>
+Once you're done writing docs and you have admin rights on the repository, simply call `mkdocs gh-deploy` in the root directory of the project and it will build and deploy your changes to your project Github pages. In our case, that's <a href="https://untapped-inc.github.io/sema-docs/" target="_blank">https://untapped-inc.github.io/sema-docs/</a>
 
 [edit-icon]: section-edit-icon.png
