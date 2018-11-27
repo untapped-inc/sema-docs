@@ -10,7 +10,7 @@ The easiest way to contribute to this doc is to edit an existing page. All you h
 
 ![Section Edit Icon][edit-icon]
 
-Follow the instructions on Github to send a pull request.
+It will link you to a Github page where you can directy edit the source of the section you were in. Follow the instructions on that page to send a pull request.
 
 But if you're going to add new pages and do more advanced stuffs, keep reading.
 
