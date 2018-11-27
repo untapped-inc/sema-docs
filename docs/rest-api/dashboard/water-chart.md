@@ -20,7 +20,7 @@ None
 | type | YES | String | Must be one of "totalchlorine", "production" or "tds"
 | begin-date | NO | String ISO 8601 format | Beginning date
 | end-date | NO | String ISO 8601 format | Ending date.
-| group-by | NO | String, optional when type is "production" either month or day default is "day". Water production is aggregated daily unless "month" is specified
+| group-by | NO | String | optional - When type is "production" either month or day default is "day". Water production is aggregated daily unless "month" is specified.
 
 !!! note
     If neither ending date nor beginning date are specified, data for the current year is returned
