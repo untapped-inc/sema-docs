@@ -55,6 +55,7 @@ nav:
       - sema/dashboard/site/sales-summary: rest-api/dashboard/sales-summary.md
       - sema/dashboard/site/water-summary: rest-api/dashboard/water-summary.md
       - sema/dashboard/site/water-chart: rest-api/dashboard/water-chart.md
+      - sema/dashboard/site/sales-by-channel-history: rest-api/dashboard/sales-by-channel-history.md
   - The Dashboard Client:
     - Overview: dashboard/overview.md
     - Redux: dashboard/redux.md
