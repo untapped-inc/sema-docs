@@ -9,7 +9,7 @@ This section is a tutorial on how to get you started with setting up the platfor
 
 ## Prerequisites
 
-* Download MySQL Workbench: Get it [there](https://dev.mysql.com/downloads/workbench/).
+* Download MySQL Workbench: Get it [here](https://dev.mysql.com/downloads/workbench/).
 * Install nvm: Follow [this link](https://github.com/creationix/nvm#installation) for instructions.
 * Install latest LTS version of Node and npm: `nvm install --lts`
 * Install Yarn: `npm i -g yarn`
@@ -185,7 +185,7 @@ It should start running at http://localhost:3001
 
 Let's test that it's running fine with curl:
 ```
-curl http://localhost:3001/untapped/health-check
+curl http://localhost:3001/sema/health-check
 ```
 It should return something like: `{"server":"Ok","database":"Ok","version":"0.0.1.4","schema":"sema_core"}`
 
