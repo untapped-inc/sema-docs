@@ -65,7 +65,11 @@ nav:
     - Sales: dashboard/sales.md
     - Volumes: dashboard/volumes.md
     - Demographics: dashboard/demographics.md
-  # - The POS Client: the-pos-client.md
+  - The POS Mobile Client:
+    - Overview: pos/overview.md
+    - Components:
+      - General:
+        - Login: pos/general/Login.md
   - Release Notes:
     - Dashboard:
       - 0.0.0.7: release-notes/dashboard/0.0.0.7.md
