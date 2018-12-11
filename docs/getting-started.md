@@ -33,7 +33,7 @@ Here are the steps to follow:
 * Find your repository folder and choose the file database > create_schema.sql
 * In the editor, add these two lines at the top of the file:
 ``` sql
-CREATE SCHEMA sema_core
+CREATE SCHEMA sema_core;
 USE sema_core;
 ```
 Feel free to name the database however you want. For the rest of this tutorial, we will use `sema_core`, so make sure you remember to change it to yours.
