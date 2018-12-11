@@ -118,7 +118,7 @@ VALUES ('CUSTOMER_UUID', 'Chez Matilda', 1, 1, 1, '25, rue Fernand', '+509371205
 
     Then simply run `uuid` to generate a uuid in your terminal: `uuid`
     
-    Then use this uuid for one customer by replacing the ==CUSTOMER_UUID== placeholder with it. Repeat the last step for subsequent ones.
+    Then use this uuid for one customer by replacing the ==CUSTOMER_UUID== placeholder with it. Repeat the last two steps for subsequent ones.
 * Now it's time to add some product categories:
 ``` sql
 INSERT INTO `product_category` (`id`, `description`, `name`)
