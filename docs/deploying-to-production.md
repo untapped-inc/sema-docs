@@ -308,13 +308,13 @@ yarn rename APPNAME "ON-SCREEN APP NAME"
 Rebranding involves changing the logos on the POS app, the on-screen app logo and the background of the login screen.
 
 At the time of writing, here's what the current logo looks like:
-![Current SWE Logo](../assets/images/swe-logo.png)
+![Current SWE Logo](assets/images/swe-logo.png)
 
 !!! note ""
     There's a white text on the logo, try to drag it around to notice it.
 
 and here's what the background of the login screen looks like:
-![Current Login Background](../assets/images/swe-login.jpg)
+![Current Login Background](assets/images/swe-login.jpg)
 
 Follow those steps to change those images to your liking:
 
