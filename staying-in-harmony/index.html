@@ -2,7 +2,7 @@
 
 
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="no-js">
   <head>
     
@@ -13,7 +13,7 @@
         <meta name="description" content="System for Emerging Market Analytics">
       
       
-        <link rel="canonical" href="https://untapped-inc.github.io/sema-docs/deploying-to-production/staying-in-harmony/">
+        <link rel="canonical" href="https://untapped-inc.github.io/sema-docs/staying-in-harmony/">
       
       
         <meta name="author" content="Untapped, Inc.">
@@ -37,21 +37,21 @@
       
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
-      <link rel="shortcut icon" href="../../assets/images/untapped-favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.0.6">
+      <link rel="shortcut icon" href="../assets/images/untapped-favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.3.0">
     
     
       
-        <title>Keeping your repo in harmony with the SEMA core repo - SEMA Technical Documentation</title>
+        <title>Keeping your fork up to date - SEMA Technical Documentation</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application.451f80e5.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.572ca0f0.css">
       
       
     
     
-      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+      <script src="../assets/javascripts/modernizr.962652e9.js"></script>
     
     
       
@@ -60,9 +60,13 @@
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
-    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
     
-      <link rel="stylesheet" href="../../assets/stylesheets/style.css">
+    
+      <link rel="stylesheet" href="../assets/stylesheets/style.css">
+    
+    
+      
     
     
   </head>
@@ -109,7 +113,7 @@
       <div class="md-flex__cell md-flex__cell--shrink">
         <a href="https://untapped-inc.github.io/sema-docs/" title="SEMA Technical Documentation" class="md-header-nav__button md-logo">
           
-            <img src="../../assets/images/untapped-favicon.png" width="24" height="24">
+            <img src="../assets/images/untapped-favicon.png" width="24" height="24">
           
         </a>
       </div>
@@ -124,7 +128,7 @@
                 SEMA Technical Documentation
               </span>
               <span class="md-header-nav__topic">
-                Keeping your repo in harmony with the SEMA core repo
+                Keeping your fork up to date
               </span>
             
           
@@ -205,7 +209,7 @@
   <label class="md-nav__title md-nav__title--site" for="__drawer">
     <a href="https://untapped-inc.github.io/sema-docs/" title="SEMA Technical Documentation" class="md-nav__button md-logo">
       
-        <img src="../../assets/images/untapped-favicon.png" width="48" height="48">
+        <img src="../assets/images/untapped-favicon.png" width="48" height="48">
       
     </a>
     SEMA Technical Documentation
@@ -241,7 +245,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../.." title="Introduction" class="md-nav__link">
+    <a href=".." title="Introduction" class="md-nav__link">
       Introduction
     </a>
   </li>
@@ -253,7 +257,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../getting-started/" title="Getting Started" class="md-nav__link">
+    <a href="../getting-started/" title="Getting Started" class="md-nav__link">
       Getting Started
     </a>
   </li>
@@ -263,38 +267,17 @@
       
       
 
-  
-
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
-    
-    <label class="md-nav__link" for="nav-3">
-      Deploying to Production
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-3">
-        Deploying to Production
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
 
   <li class="md-nav__item">
-    <a href="../tutorial/" title="Tutorial" class="md-nav__link">
-      Tutorial
+    <a href="../deploying-to-production/" title="Deploying to Production" class="md-nav__link">
+      Deploying to Production
     </a>
   </li>
 
-        
-          
-          
-          
+    
+      
+      
+      
 
   
 
@@ -307,11 +290,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        Keeping your repo in harmony with the SEMA core repo
+        Keeping your fork up to date
       </label>
     
-    <a href="./" title="Keeping your repo in harmony with the SEMA core repo" class="md-nav__link md-nav__link--active">
-      Keeping your repo in harmony with the SEMA core repo
+    <a href="./" title="Keeping your fork up to date" class="md-nav__link md-nav__link--active">
+      Keeping your fork up to date
     </a>
     
       
@@ -325,8 +308,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#credits" title="Credits" class="md-nav__link">
-    Credits
+  <a href="#fetch-from-upstream-remote" title="Fetch from upstream remote" class="md-nav__link">
+    Fetch from upstream remote
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checkout-your-master-branch-and-merge-upstream" title="Checkout your master branch and merge upstream" class="md-nav__link">
+    Checkout your master branch and merge upstream
   </a>
   
 </li>
@@ -349,11 +339,6 @@
     
   </li>
 
-        
-      </ul>
-    </nav>
-  </li>
-
     
       
       
@@ -361,7 +346,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../the-database-schema/" title="The Database Schema" class="md-nav__link">
+    <a href="../the-database-schema/" title="The Database Schema" class="md-nav__link">
       The Database Schema
     </a>
   </li>
@@ -374,13 +359,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
     
-    <label class="md-nav__link" for="nav-5">
+    <label class="md-nav__link" for="nav-6">
       The REST API Server
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-5">
+      <label class="md-nav__title" for="nav-6">
         The REST API Server
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -392,7 +377,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../rest-api/overview/" title="Overview" class="md-nav__link">
+    <a href="../rest-api/overview/" title="Overview" class="md-nav__link">
       Overview
     </a>
   </li>
@@ -405,13 +390,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-2" type="checkbox" id="nav-5-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-2" type="checkbox" id="nav-6-2">
     
-    <label class="md-nav__link" for="nav-5-2">
+    <label class="md-nav__link" for="nav-6-2">
       General
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-5-2">
+      <label class="md-nav__title" for="nav-6-2">
         General
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -423,7 +408,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../rest-api/general/health-check/" title="sema/health-check" class="md-nav__link">
+    <a href="../rest-api/general/health-check/" title="sema/health-check" class="md-nav__link">
       sema/health-check
     </a>
   </li>
@@ -435,7 +420,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../rest-api/general/login/" title="sema/login" class="md-nav__link">
+    <a href="../rest-api/general/login/" title="sema/login" class="md-nav__link">
       sema/login
     </a>
   </li>
@@ -447,7 +432,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../rest-api/general/kiosks/" title="sema/kiosks" class="md-nav__link">
+    <a href="../rest-api/general/kiosks/" title="sema/kiosks" class="md-nav__link">
       sema/kiosks
     </a>
   </li>
@@ -459,7 +444,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../rest-api/general/products/" title="sema/products" class="md-nav__link">
+    <a href="../rest-api/general/products/" title="sema/products" class="md-nav__link">
       sema/products
     </a>
   </li>
@@ -471,7 +456,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../rest-api/general/sales-channels/" title="sema/sales-channels" class="md-nav__link">
+    <a href="../rest-api/general/sales-channels/" title="sema/sales-channels" class="md-nav__link">
       sema/sales-channels
     </a>
   </li>
@@ -483,7 +468,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../rest-api/general/customer-types/" title="sema/customer-types" class="md-nav__link">
+    <a href="../rest-api/general/customer-types/" title="sema/customer-types" class="md-nav__link">
       sema/customer-types
     </a>
   </li>
@@ -501,13 +486,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-3" type="checkbox" id="nav-5-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-3" type="checkbox" id="nav-6-3">
     
-    <label class="md-nav__link" for="nav-5-3">
+    <label class="md-nav__link" for="nav-6-3">
       Point of Sale (POS) specific
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-5-3">
+      <label class="md-nav__title" for="nav-6-3">
         Point of Sale (POS) specific
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -519,7 +504,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../rest-api/pos/customers/" title="sema/site/customers" class="md-nav__link">
+    <a href="../rest-api/pos/customers/" title="sema/site/customers" class="md-nav__link">
       sema/site/customers
     </a>
   </li>
@@ -531,7 +516,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../rest-api/pos/receipts/" title="sema/site/receipts" class="md-nav__link">
+    <a href="../rest-api/pos/receipts/" title="sema/site/receipts" class="md-nav__link">
       sema/site/receipts
     </a>
   </li>
@@ -543,7 +528,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../rest-api/pos/product-mrps/" title="sema/site/product-mrps" class="md-nav__link">
+    <a href="../rest-api/pos/product-mrps/" title="sema/site/product-mrps" class="md-nav__link">
       sema/site/product-mrps
     </a>
   </li>
@@ -561,13 +546,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-4" type="checkbox" id="nav-5-4">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-4" type="checkbox" id="nav-6-4">
     
-    <label class="md-nav__link" for="nav-5-4">
+    <label class="md-nav__link" for="nav-6-4">
       Dashboard/Reports specific
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-5-4">
+      <label class="md-nav__title" for="nav-6-4">
         Dashboard/Reports specific
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -579,7 +564,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../rest-api/dashboard/customer-summary/" title="sema/dashboard/site/customer-summary" class="md-nav__link">
+    <a href="../rest-api/dashboard/customer-summary/" title="sema/dashboard/site/customer-summary" class="md-nav__link">
       sema/dashboard/site/customer-summary
     </a>
   </li>
@@ -591,7 +576,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../rest-api/dashboard/receipt-summary/" title="sema/dashboard/site/receipt-summary" class="md-nav__link">
+    <a href="../rest-api/dashboard/receipt-summary/" title="sema/dashboard/site/receipt-summary" class="md-nav__link">
       sema/dashboard/site/receipt-summary
     </a>
   </li>
@@ -603,7 +588,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../rest-api/dashboard/sales-summary/" title="sema/dashboard/site/sales-summary" class="md-nav__link">
+    <a href="../rest-api/dashboard/sales-summary/" title="sema/dashboard/site/sales-summary" class="md-nav__link">
       sema/dashboard/site/sales-summary
     </a>
   </li>
@@ -615,7 +600,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../rest-api/dashboard/water-summary/" title="sema/dashboard/site/water-summary" class="md-nav__link">
+    <a href="../rest-api/dashboard/water-summary/" title="sema/dashboard/site/water-summary" class="md-nav__link">
       sema/dashboard/site/water-summary
     </a>
   </li>
@@ -627,7 +612,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../rest-api/dashboard/water-chart/" title="sema/dashboard/site/water-chart" class="md-nav__link">
+    <a href="../rest-api/dashboard/water-chart/" title="sema/dashboard/site/water-chart" class="md-nav__link">
       sema/dashboard/site/water-chart
     </a>
   </li>
@@ -639,7 +624,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../rest-api/dashboard/sales-by-channel-history/" title="sema/dashboard/site/sales-by-channel-history" class="md-nav__link">
+    <a href="../rest-api/dashboard/sales-by-channel-history/" title="sema/dashboard/site/sales-by-channel-history" class="md-nav__link">
       sema/dashboard/site/sales-by-channel-history
     </a>
   </li>
@@ -662,13 +647,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
     
-    <label class="md-nav__link" for="nav-6">
+    <label class="md-nav__link" for="nav-7">
       The Dashboard Client
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-6">
+      <label class="md-nav__title" for="nav-7">
         The Dashboard Client
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -680,7 +665,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../dashboard/overview/" title="Overview" class="md-nav__link">
+    <a href="../dashboard/overview/" title="Overview" class="md-nav__link">
       Overview
     </a>
   </li>
@@ -692,7 +677,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../dashboard/redux/" title="Redux" class="md-nav__link">
+    <a href="../dashboard/redux/" title="Redux" class="md-nav__link">
       Redux
     </a>
   </li>
@@ -704,7 +689,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../dashboard/water-operations/" title="Water Operations" class="md-nav__link">
+    <a href="../dashboard/water-operations/" title="Water Operations" class="md-nav__link">
       Water Operations
     </a>
   </li>
@@ -716,7 +701,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../dashboard/sales/" title="Sales" class="md-nav__link">
+    <a href="../dashboard/sales/" title="Sales" class="md-nav__link">
       Sales
     </a>
   </li>
@@ -728,7 +713,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../dashboard/volumes/" title="Volumes" class="md-nav__link">
+    <a href="../dashboard/volumes/" title="Volumes" class="md-nav__link">
       Volumes
     </a>
   </li>
@@ -740,7 +725,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../dashboard/demographics/" title="Demographics" class="md-nav__link">
+    <a href="../dashboard/demographics/" title="Demographics" class="md-nav__link">
       Demographics
     </a>
   </li>
@@ -758,13 +743,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
     
-    <label class="md-nav__link" for="nav-7">
+    <label class="md-nav__link" for="nav-8">
       The POS Mobile Client
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-7">
+      <label class="md-nav__title" for="nav-8">
         The POS Mobile Client
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -776,7 +761,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../pos/overview/" title="Overview" class="md-nav__link">
+    <a href="../pos/overview/" title="Overview" class="md-nav__link">
       Overview
     </a>
   </li>
@@ -789,13 +774,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-2" type="checkbox" id="nav-7-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-2" type="checkbox" id="nav-8-2">
     
-    <label class="md-nav__link" for="nav-7-2">
+    <label class="md-nav__link" for="nav-8-2">
       Components
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-7-2">
+      <label class="md-nav__title" for="nav-8-2">
         Components
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -808,13 +793,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-2-1" type="checkbox" id="nav-7-2-1">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-2-1" type="checkbox" id="nav-8-2-1">
     
-    <label class="md-nav__link" for="nav-7-2-1">
+    <label class="md-nav__link" for="nav-8-2-1">
       General
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-7-2-1">
+      <label class="md-nav__title" for="nav-8-2-1">
         General
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -826,7 +811,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../pos/general/Login/" title="Login" class="md-nav__link">
+    <a href="../pos/general/Login/" title="Login" class="md-nav__link">
       Login
     </a>
   </li>
@@ -854,13 +839,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
     
-    <label class="md-nav__link" for="nav-8">
+    <label class="md-nav__link" for="nav-9">
       Release Notes
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-8">
+      <label class="md-nav__title" for="nav-9">
         Release Notes
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -873,13 +858,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-1" type="checkbox" id="nav-8-1">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-1" type="checkbox" id="nav-9-1">
     
-    <label class="md-nav__link" for="nav-8-1">
+    <label class="md-nav__link" for="nav-9-1">
       Dashboard
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-8-1">
+      <label class="md-nav__title" for="nav-9-1">
         Dashboard
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -891,7 +876,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../release-notes/dashboard/0.0.0.7/" title="0.0.0.7" class="md-nav__link">
+    <a href="../release-notes/dashboard/0.0.0.7/" title="0.0.0.7" class="md-nav__link">
       0.0.0.7
     </a>
   </li>
@@ -909,13 +894,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-2" type="checkbox" id="nav-8-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-2" type="checkbox" id="nav-9-2">
     
-    <label class="md-nav__link" for="nav-8-2">
+    <label class="md-nav__link" for="nav-9-2">
       POS
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-8-2">
+      <label class="md-nav__title" for="nav-9-2">
         POS
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -927,7 +912,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../release-notes/pos/0.4.2/" title="0.4.2" class="md-nav__link">
+    <a href="../release-notes/pos/0.4.2/" title="0.4.2" class="md-nav__link">
       0.4.2
     </a>
   </li>
@@ -939,7 +924,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../release-notes/pos/0.3.2/" title="0.3.2" class="md-nav__link">
+    <a href="../release-notes/pos/0.3.2/" title="0.3.2" class="md-nav__link">
       0.3.2
     </a>
   </li>
@@ -951,7 +936,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../release-notes/pos/0.3.1/" title="0.3.1" class="md-nav__link">
+    <a href="../release-notes/pos/0.3.1/" title="0.3.1" class="md-nav__link">
       0.3.1
     </a>
   </li>
@@ -963,7 +948,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../release-notes/pos/0.0.8/" title="0.0.8" class="md-nav__link">
+    <a href="../release-notes/pos/0.0.8/" title="0.0.8" class="md-nav__link">
       0.0.8
     </a>
   </li>
@@ -985,7 +970,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../license/" title="License" class="md-nav__link">
+    <a href="../license/" title="License" class="md-nav__link">
       License
     </a>
   </li>
@@ -1012,8 +997,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#credits" title="Credits" class="md-nav__link">
-    Credits
+  <a href="#fetch-from-upstream-remote" title="Fetch from upstream remote" class="md-nav__link">
+    Fetch from upstream remote
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checkout-your-master-branch-and-merge-upstream" title="Checkout your master branch and merge upstream" class="md-nav__link">
+    Checkout your master branch and merge upstream
   </a>
   
 </li>
@@ -1042,32 +1034,61 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/untapped-inc/sema-docs/edit/master/docs/deploying-to-production/staying-in-harmony.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/untapped-inc/sema-docs/edit/master/docs/staying-in-harmony.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="staying-in-harmony-lets-not-walk-over-each-other">Staying in Harmony <small>Let's not walk over each other</small><a class="headerlink" href="#staying-in-harmony-lets-not-walk-over-each-other" title="Permanent link">&para;</a></h1>
-<p>This section is for those who decide to customize their version of SEMA but still want to receive particular updates from <a href="https://github.com/untapped-inc/sema-core/">the core repository</a> without losing their changes in the long run.</p>
-<p>This section assumes you already have <a href="/sema-docs/getting-started/">a version of SEMA running in development mode</a> and <a href="/sema-docs/deploying-to-production/tutorial">one running in production mode</a>. We'll also assume you customized your POS app by changing the name, the logos and/or have even added your own features to one or more parts of the system.</p>
+                <h1 id="staying-in-harmony-lets-not-walk-over-each-other">Staying in harmony <small>Let's not walk over each other</small><a class="headerlink" href="#staying-in-harmony-lets-not-walk-over-each-other" title="Permanent link">&para;</a></h1>
+<p>This section is for those who decide to customize their version of SEMA but still want to receive particular updates from <a href="https://github.com/untapped-inc/sema-core/">the main repository</a> without losing their changes in the long run.</p>
+<p>This section assumes you already have <a href="/sema-docs/getting-started/">a version of SEMA running in development mode</a> and <a href="/sema-docs/deploying-to-production/tutorial">one running in production mode</a>.
+We'll also assume that:</p>
+<ul>
+<li>You've FORKED the main repo</li>
+<li>You've Customized your POS app by changing the name, the logos, etc...</li>
+<li>You've added your own features to one or more parts of the system</li>
+</ul>
 <p>It's all fun and games, until you notice, from one of our release notes, that we added a new feature that you like.</p>
-<p>What do you do?</p>
+<p>What do you do now?</p>
 <p>Your first guess would be to use <code class="codehilite">git pull upstream master</code>, but that's going to blow up your old changes and will annoy you with conflicts that don't even relate to the commit(s) that implement(s) the stuff(s) you like.</p>
-<p>Here's how to selectively merge commits from our repo to yours:</p>
-<ol>
-<li>In your development repo, make sure your repo is at its latest version: <code class="codehilite">git pull origin master</code></li>
-<li>Add the original repo as an upstream remote: <code class="codehilite">git remote add upstream git@github.com:untapped-inc/sema-core.git</code></li>
-<li>Fetch changes from the upstream remote: <code class="codehilite">git fetch upstream</code></li>
-<li>It will list all the branches it fetched from the remote. The changes will probably be from the <code class="codehilite">upstream/master</code> branch, since we already published them</li>
-<li>Log the commit messages from this branch: <code class="codehilite">git log upstream/master</code></li>
-<li>Using the hash number of each commit, figure out which commit(s) is/are related to the feature(s) you like: <code class="codehilite">git show SHA1</code></li>
-<li>For each of those commits, copy the hash number of it and cherry pick it: <code class="codehilite">git cherry-pick -n SHA1</code>. Cherry picking a commit using the <code class="codehilite">-n</code> flag will set all the modified files in this commit in a staged mode. The files that have conflicts with your own code will be unstaged and will contain the conflict diffs. You have to take care of conflicts manually, using your favorite text editor. No need to even stage the changes that you make.</li>
-<li>Once you're done with your modifications and testing, unstage all changes: <code class="codehilite">git reset HEAD</code></li>
-<li>Use <code class="codehilite">git add --patch</code> to pick and choose the changes that you want. Enter <code class="codehilite">y</code> for yes, <code class="codehilite">n</code> for no. Enter <code class="codehilite">?</code> for more options.</li>
-<li>Create a commit for all the staged files: <code class="codehilite">git commit -m &quot;Merged the IoTile integration feature from Untapped&quot;</code></li>
-<li>Push your changes to your own repo and we made it!: <code class="codehilite">git push origin master</code></li>
-</ol>
-<p>We admit it, those are pretty intermediate to advanced git commands. Hopefully we did a good enough job explaining most steps to you. Just make sure to follow the process in order.</p>
-<h2 id="credits">Credits<a class="headerlink" href="#credits" title="Permanent link">&para;</a></h2>
-<p>This section wouldn't be made possible without <a href="https://stackoverflow.com/a/1405189/927559">this succint answer by Tim, on StackOverflow</a>.</p>
+<p>Keep reading if you want to selectively merge modifications/updates from our repo to yours.</p>
+<h2 id="fetch-from-upstream-remote">Fetch from upstream remote<a class="headerlink" href="#fetch-from-upstream-remote" title="Permanent link">&para;</a></h2>
+<p>While this isn't an absolutely necessary step, you'll want to make sure you keep your fork up to date by tracking the original "upstream" repo that you forked. To do this, you'll need to add a remote:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>git remote add upstream https://github.com/untapped-inc/sema-core.git
+</pre></div>
+</td></tr></table>
+
+<p>Verify the new remote named 'upstream'</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>git remote -v
+</pre></div>
+</td></tr></table>
+
+<p>Whenever you want to update your fork with the latest upstream changes, you'll need to first fetch the upstream repo's branches and latest commits to bring them into your repository:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>git fetch -v upstream
+</pre></div>
+</td></tr></table>
+
+<p><code class="codehilite">-v</code> makes sure it outputs the fetched branches (verbose).</p>
+<h2 id="checkout-your-master-branch-and-merge-upstream">Checkout your master branch and merge upstream<a class="headerlink" href="#checkout-your-master-branch-and-merge-upstream" title="Permanent link">&para;</a></h2>
+<p>Now, checkout your own master branch and squash and merge the upstream repo's master branch. We're merging the master branch here because this is the branch that Untapped releases latest features on. You could have used another one for your own purposes:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>git checkout master
+</pre></div>
+</td></tr></table>
+
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>git merge --squash upstream/master
+</pre></div>
+</td></tr></table>
+
+<p>If there are no unique commits on the local master branch, git will simply perform a fast-forward.</p>
+<p>However, if you have been making changes on master - or already merged another branch, you may have to deal with conflicts.<br>When doing so, either through a graphical user interface or the command line, make sure to pick the right modification source for the conflict: <code class="codehilite">Ours</code>/<code class="codehilite">HEAD</code> - the local changes, <code class="codehilite">Theirs</code>/<code class="codehilite">Incoming Changes</code> - the incoming changes. </p>
+<p>Then you can stage the changes and make a single commit to complete the merge:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>git add .
+</pre></div>
+</td></tr></table>
+
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>git commit -m &quot;Merge changes from Untapped&quot;
+</pre></div>
+</td></tr></table>
+
+<p>Now, your local master branch is up-to-date with everything modified upstream while retaining your own changes.</p>
 <p>Feel free to leave a comment down below or simply ping us in the <a href="https://gitter.im/sema-dev/" target="_blank">Gitter community</a>.</p>
                 
                   
@@ -1083,9 +1104,9 @@
   <div id="disqus_thread"></div>
   <script>
     var disqus_config = function () {
-      this.page.url = "https://untapped-inc.github.io/sema-docs/deploying-to-production/staying-in-harmony/";
+      this.page.url = "https://untapped-inc.github.io/sema-docs/staying-in-harmony/";
       this.page.identifier =
-        "deploying-to-production/staying-in-harmony/";
+        "staying-in-harmony/";
     };
     (function() {
       var d = document, s = d.createElement("script");
@@ -1107,7 +1128,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../tutorial/" title="Tutorial" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../deploying-to-production/" title="Deploying to Production" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1116,13 +1137,13 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Tutorial
+                Deploying to Production
               </span>
             </div>
           </a>
         
         
-          <a href="../../the-database-schema/" title="The Database Schema" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../the-database-schema/" title="The Database Schema" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
@@ -1151,7 +1172,7 @@
       
         
   <div class="md-footer-social">
-    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
+    <link rel="stylesheet" href="../assets/fonts/font-awesome.css">
     
       <a href="http://semawater.org" class="md-footer-social__link fa fa-globe"></a>
     
@@ -1166,12 +1187,9 @@
       
     </div>
     
-      <script src="../../assets/javascripts/application.5e60981f.js"></script>
+      <script src="../assets/javascripts/application.a353778b.js"></script>
       
-      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
-      
-    
-    
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
       
     
   </body>
