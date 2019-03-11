@@ -3,9 +3,9 @@
 <!-- Images are referenced from here -->
 [sema-architecture-diagram]: assets/images/sema-architecture-diagram.png
 
-In a nutshell, the clients communicate with the REST API to gather and send data to the database.
+In a nutshell, the clients communicate with the REST API to gather and send data **from** and **to** the database.
 
-Here are the technologies being used by each of them:
+Here are the technologies being used by each of the components that make up SEMA:
 
 - The web **back office** client: Reactjs
 - The **POS** mobile client: React Native
