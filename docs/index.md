@@ -1,21 +1,63 @@
-# SEMA Technical Documentation
-
-## What is SEMA?
+# SEMA <small>Introduction</small>
 
 The System for Emerging Market Analytics is an IT platform designed for Safe Water Enterprises (SWE) across all sectors and regions.
 
 See the <a href="http://semawater.org" target="_blank">official home page</a> for more info.
 
-[Click here](/sema-docs/getting-started) to quickly get started.
+[Click here](getting-started.md) to quickly get started.
 
-## Join our Community Chat!
+## What is a Safe Water Enterprise?
+
+For those who just want to contribute to the codebase, you may want to know the impact of your contributions, so here's a quick background:
+
+A Safe Water Enterprise (SWE) is a sustainable solution to supply rural and peri-urban communities with safe drinking water. The concept combines a low-cost and low-maintenance membrane-based water treatment technology with an entrepreneurial approach for the sustainable management of the utility.
+
+SWEs are designed to meet the urgent need for access to safe water globally as well as to provide water related health knowledge through trainings and social marketing.
+
+Through their community based social enterprise approach, the SWEs are designed to provide a long-term sustainable solution at the kiosk level.
+
+Here's, for example, the organizational structure (at the time of writing) of dloHaiti, which is an SWE in Haiti:
+
+- An HQ team that analyzises the kiosks data, makes decisions based on this data and provides support to kiosk staffs
+- For each kiosk, a kiosk staff which comprises of at least 2 operators and 1 driver (for deliveries)
+
+There's more to it, but we keep it simple here.
+
+Now, SEMA aims to digitize the procedures that make up this structure and help SWEs scale faster with accurate and on-demand data by providing a set of useful tools through a mobile POS app (used by the kiosk operators) and a back office web app (used by the HQ team).
+
+You may want to do more research to get more accustomed to the users of the components that make up SEMA.
+
+## Features
+
+Here's what's included in SEMA:
+
+- A mobile POS - React Native - (Only Android **for now**) that allows to:
+    - Browse and pick products
+    - Manage customers
+    - Manage inventory
+    - Process and manage (with limited actions) sales
+    - Process and manage loans
+    - Do all the above offline
+- A back office on the web - Reacjs - that allows to:
+    - Make administrative actions:
+        - Manage Products
+        - Manage Users/Employees
+    - View Water Operations Reports
+    - View Sales Reports
+    - View Demographics Data
+    - View Volume Reports
+- An API server - Nodejs/Expressjs - that acts as an intermediate between all the clients and the database
+
+See the [Architecture and Components](architecture-and-components.md) section for more.
+
+<!-- ## Join our Community Chat!
 
 !!! note ""
     This documentation will not be complete without a community and we strongly urge you to join us over at Gitter - you can use your Github account to login - for any questions and suggestions that you may have:
 
     <a href="https://gitter.im/sema-dev/" target="_blank"><img src="https://badges.gitter.im/untapped-inc/sema-core.png"></a>
 
-    **You will be able to instantly chat with our core team for anything you need about SEMA.**
+    **You will be able to instantly chat with our core team for anything you need about SEMA.** -->
 
 ## How is this doc structured?
 
