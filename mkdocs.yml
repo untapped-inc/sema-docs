@@ -52,27 +52,25 @@ nav:
       - sema/site/receipts: rest-api/pos/receipts.md
       - sema/site/product-mrps: rest-api/pos/product-mrps.md
     - Dashboard/Reports specific:
-      - sema/dashboard/site/customer-summary: rest-api/dashboard/customer-summary.md
-      - sema/dashboard/site/receipt-summary: rest-api/dashboard/receipt-summary.md
-      - sema/dashboard/site/sales-summary: rest-api/dashboard/sales-summary.md
-      - sema/dashboard/site/water-summary: rest-api/dashboard/water-summary.md
-      - sema/dashboard/site/water-chart: rest-api/dashboard/water-chart.md
-      - sema/dashboard/site/sales-by-channel-history: rest-api/dashboard/sales-by-channel-history.md
-  - The Dashboard Client:
-    - Overview: dashboard/overview.md
-    - Redux: dashboard/redux.md
-    - Water Operations: dashboard/water-operations.md
-    - Sales: dashboard/sales.md
-    - Volumes: dashboard/volumes.md
-    - Demographics: dashboard/demographics.md
+      - sema/dashboard/site/customer-summary: rest-api/back-office/customer-summary.md
+      - sema/dashboard/site/receipt-summary: rest-api/back-office/receipt-summary.md
+      - sema/dashboard/site/sales-summary: rest-api/back-office/sales-summary.md
+      - sema/dashboard/site/water-summary: rest-api/back-office/water-summary.md
+      - sema/dashboard/site/water-chart: rest-api/back-office/water-chart.md
+      - sema/dashboard/site/sales-by-channel-history: rest-api/back-office/sales-by-channel-history.md
+  - The Back Office Client:
+    - Overview: back-office/overview.md
+    - Redux: back-office/redux.md
+    - Water Operations: back-office/water-operations.md
+    - Sales: back-office/sales.md
+    - Volumes: back-office/volumes.md
+    - Demographics: back-office/demographics.md
   - The POS Mobile Client:
     - Overview: pos/overview.md
     - Components:
       - General:
         - Login: pos/general/Login.md
   - Release Notes:
-    - Dashboard:
-      - 0.0.0.7: release-notes/dashboard/0.0.0.7.md
     - POS:
       - 0.4.2: release-notes/pos/0.4.2.md
       - 0.3.2: release-notes/pos/0.3.2.md

@@ -48,7 +48,7 @@ Here's what's included in SEMA:
     - View Volume Reports
 - An API server - Nodejs/Expressjs - that acts as an intermediate between all the clients and the database
 
-See the [Architecture and Components](architecture-and-components.md) section for more.
+See the [Architecture and Components](architecture-and-components-overview.md) section for more.
 
 <!-- ## Join our Community Chat!
 

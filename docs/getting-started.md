@@ -4,25 +4,25 @@ disqus: sema-docs
 
 This section is a tutorial on how to get you started with setting up the platform on your system locally so you can test it.
 
-!!! note ""
-    We cover only *nix systems like Linux and OS X. Windows users will need to figure out alternatives on their own.[^windows-users]
+!!! note "Windows Users"
+    We only cover *nix systems like Linux and OS X **for now**. Windows users will need to figure out alternatives on their own.[^windows-users]
 
-## Prerequisites
+## The Database
 
-* Download MySQL Workbench: Get it [here](https://dev.mysql.com/downloads/workbench/).
+Let's get started with the database.
+
+### Prerequisites 1
+
+From this point of this tutorial, here's what you'll need to follow along:
+
+* Install MySQL: Follow [this link](https://dev.mysql.com/doc/refman/5.7/en/installing.html) for instructions for your system. Make sure you create an admin user, or using `root` is fine too.[^using-root]
 * Install nvm: Follow [this link](https://github.com/creationix/nvm#installation) for instructions.
 * Install latest LTS version of Node and npm: `nvm install --lts`
 * Install Yarn: `npm i -g yarn`
-* Install react-scripts (To be able to run the client): `yarn global add react-scripts`
-* Install MySQL: Follow [this link](https://dev.mysql.com/doc/refman/5.7/en/installing.html) for instructions for your system. Make sure you create an admin user, or using `root` is fine too.[^using-root]
-* Fork the project repo through Github: Follow [this link](https://help.github.com/articles/fork-a-repo/) for instructions.
-* Clone your new Git repo to a local folder: `git clone https://github.com/YOUR-USERNAME/sema-core.git` - Make sure to change ==YOUR-USERNAME== to your Github username.
-* Move into your new folder: `cd sema-core`
-* From this point on, we expect that you are in the root directory of the project.
 
-## Setting up the Database
+### Configurations
 
-Assuming you successfully installed MySQL on your system and created an admin user, let's start creating the `sema_core` database and populating some sample data for the project.
+Assuming you've successfully installed MySQL on your system and created an admin user (not **root**), let's start creating the `sema_core` database and populating the basic data for the project.
 
 ### Creating the database
 
@@ -32,13 +32,10 @@ Here are the steps to follow:
 * Go to File > Open SQL Script...
 * Find your repository folder and choose the file database > create_schema.sql
 * In the editor, add these two lines at the top of the file:
-``` sql
-CREATE SCHEMA sema_core;
-USE sema_core;
-```
-Feel free to name the database however you want. For the rest of this tutorial, we will use `sema_core`, so make sure you remember to change it to yours.
-
 * Go to Query > Execute (All or Selection). It will run the script and create your new database
+
+!!! note ""
+    This will create a new database named **sema_core**. If you want to rename it, either use a tool like MySQL Workbench or make sure you edit the `create_schema.sql` file fromt this line: `CREATE SCHEMA sema_core;` before you Execute it.
 
 ### Populating the required tables
 
@@ -102,8 +99,6 @@ VALUES (1, 'reseller', 'Resellers');
 INSERT INTO `sales_channel` (`id`, `name`, `description`)
 VALUES (2, 'direct', 'Customers that walk up to the kiosk');
 ```
-!!! note
-    Those two sales channels are required for now. Do not change them, except for the descriptions.
 * Next, add a couple of customers:
 ```sql
 INSERT INTO `customer_account` (`id`, `name`, `customer_type_id`, `sales_channel_id`, `kiosk_id`, `address_line1`, `gps_coordinates`, `phone_number`)
@@ -145,16 +140,33 @@ VALUES (2, 1, 1, 2, '4000.00', 'UGX', '2000.00');
 
 Your database is now ready.
 
-To learn more about the database schema, please [click here](/sema-docs/the-database-schema).
+To learn more about the database schema, please [click here](the-database-schema.md).
 
-## Configurations
+## The REST API Server
 
-Before you can start running the clients and the server, you will need to first set the property values in the configuration file.
+Let's move on to the REST API.
+
+### Prerequisites 2
+
+From this point of this tutorial, here's what you'll need to follow along:
+
+* Create a new root directory to contain the whole project: `mkdir sema`
+* Move into the root directory: `cd sema`
+* Create a new repository by forking the official REST API repo through Github: Follow [this link](https://help.github.com/articles/fork-a-repo/) for instructions. Link to the repo: https://github.com/untapped-inc/sema-core
+* Clone your new repository to a local directory: `git clone https://github.com/YOUR-USERNAME/sema-core.git` - Make sure to change ==YOUR-USERNAME== to your Github username or the one you chose to fork the repo for
+* Move into the root directory of the REST API: `cd sema-core`
+* From this point on, we expect that you are in the root directory of the REST API
+
+### Configurations
+
+Before you can start running the server, you will need to first set the property values in the configurations file.
 
 !!! info ""
-    This configuration file is located in the root folder as `.example-env`. It's a dot file, so if you want to see it from your terminal, you need to add the `-a` flag to your ls: `ls -a`.
+    This configurations file is located in the root directory of the REST API as `.example-env`. It's a dot file, so if you want to see it from your terminal, you need to add the `-a` flag to your ls: `ls -a`.
 
 First, rename this file from `.example-env` to `.env`: `cp .example-env .env`
+
+Then move it to the parent directory (which should be `sema` if you were following along): `mv .env ../.env`
 
 Now open this `.env` file using your favorite text editor. These properties provide the necessary details for the clients and the server to access the database and setup a few dependencies. Use the DB credentials you created while installing and setting up MySQL.
 
@@ -168,16 +180,15 @@ Now open this `.env` file using your favorite text editor. These properties prov
 | DEFAULT_TABLES           | The tables that must be populated - postinstall - by sequelize-auto by default E.g. `user,role,user_role`. We recommend you keep it to the default value.      |
 | JWT_SECRET               | JSON Web Token secret used to encrypt the token. E.g. `f8d74387h8undgs87`. Don't use this example, type in anything in there to make it hard to guess, this is some kind of password that will be used between the clients and the server.        |
 | JWT_EXPIRATION_LENGTH    | Length of time the token is valid for. E.g. `1 day`    |
-| BCRYPT_SALT_ROUNDS       | How much time is needed to calculate a single BCrypt hash - Between 8 and 12 is recommended. Used for encrypting passwords for users. E.g. `10` |
+| BCRYPT_SALT_ROUNDS       | How much time is needed to calculate a single BCrypt hash - Between 8 and 12 is recommended. Used for encrypting passwords for users. Remember, changing this requires that you use the same salt rounds value when creating a new password on the `user` table. E.g. `10` |
 
 !!! danger
     We **Strongly** recommend that you do not to push the `.env` file to your repository after adding the correct configuration property values. For security measures, we added it to the project's `.gitignore` file so that git can always ignore it. So you would need to really want to push it to be able to do so.
 
-## Running the server
+### Running the server
 
-Now that your database and your configurations are setup. Let's run the server, shall we?
+Now that your database and your configurations are all set. Let's run the server, shall we?
 
-* Move into the `report_server` directory: `cd report_server`
 * Install dependencies: `yarn`
 * Run the server: `yarn start`
 
@@ -194,33 +205,58 @@ The version number may vary.
 !!! note
     The clients are configured to access the server on port 3001.
 
-To learn more about the REST API server, please [click here](/sema-docs/rest-api/overview).
+To learn more about the REST API server, please [click here](rest-api/overview.md).
 
-## Running the dashboard client
+## The Web Back Office
 
-Now it's time to run the dashboard client. Here are the steps to follow:
+Time to run the back office.
 
-* Move into the `report_client` directory: `cd report_client`
+### Prerequisites 3
+
+From this point of this tutorial, here's what you'll need to follow along:
+
+* Assuming you are currently in the `sema-core` directory, move back into the root directory: `cd ..`
+* Create a new repository by forking the official web back office repo through Github: Follow [this link](https://help.github.com/articles/fork-a-repo/) for instructions. Link to the repo: https://github.com/untapped-inc/sema-back-office-web
+* Clone your new repository to a local directory: `git clone https://github.com/YOUR-USERNAME/sema-back-office-web.git` - Make sure to change ==YOUR-USERNAME== to your Github username or the one you chose to fork the repo for
+* Move into the root directory of the web back office: `cd sema-back-office-web`
+* Install react-scripts (To be able to run the client): `yarn global add react-scripts`
+* From this point on, we expect that you are in the root directory of the web back office
+
+### Running the web back office
+
+Now it's time to run the back office. Here are the steps to follow:
+
 * Install dependencies: `yarn`
 * Run the client: `yarn start`
 
 It should start running at http://localhost:3000
 
-Notice the port numer: 3000
+Notice the port number: 3000
 
-Go to the above link and test the client by logging in with the user you created during the [database setup](#setting-up-the-database).
+Go to the above link and test the client by logging in with the user credentials you created during the [database setup](#populating-the-required-tables).
 
-To learn more about the dashboard client, please [click here](/sema-docs/dashboard/overview).
+To learn more about the back office, please [click here](back-office/overview.md).
 
-## Running the POS client
+## The POS Mobile Client
 
 Finally, let's run the POS client.
+
+### Prerequisites 4
+
+From this point of this tutorial, here's what you'll need to follow along:
+
+* Assuming you are currently in the `sema-back-office-web` directory, move back into the root directory: `cd ..`
+* Create a new repository by forking the official POS mobile client repo through Github: Follow [this link](https://help.github.com/articles/fork-a-repo/) for instructions. Link to the repo: https://github.com/untapped-inc/sema-pos-mobile
+* Clone your new repository to a local directory: `git clone https://github.com/YOUR-USERNAME/sema-pos-mobile.git` - Make sure to change ==YOUR-USERNAME== to your Github username or the one you chose to fork the repo for
+* Move into the root directory of the POS mobile client: `cd sema-pos-mobile`
+* From this point on, we expect that you are in the root directory of the POS mobile client
+
+### Running the POS mobile client
 
 * Follow the Android setup steps at [the official react native  docs](https://facebook.github.io/react-native/docs/getting-started.html#content). Make sure you select the appropriate tabs in the instructions.
     * "Building Projects with Native Code"
     * "Development OS: macOS or Windows or Linux.
     * Target OS: Android"
-* Move into the mobile_client directory: `cd mobile_client`
 * Install dependencies: `yarn`
 * Create and open an emulator either by using [Genymotion](https://www.genymotion.com) or the [Android Studio AVD](https://developer.android.com/studio/run/emulator)
     * Use at least a 7 inch tablet with a minimum Android version of 6.0.0
@@ -231,7 +267,7 @@ You should get the Settings page. From there, fill up the form to make the conne
 | Settings Field          | Description                                            |
 | ------------------------ | --------------------------------------------------     |
 | SEMA Service URL         | The URL to the running server. Since we're on local, we just need to get the current IP address of our system using `ifconfig`. E.g.: http://192.168.1.7:3001. Notice the port number of the server at the end. |
-| Site                  | The kiosk that we created during [database setup](#setting-up-the-database). E.g.: `Bois9`             |
+| Site                  | The kiosk that we created during [database setup](#populating-the-required-tables). E.g.: `Bois9`             |
 | Username or Email        | This is the user we just used to login to the dashboard client. E.g. `Administrator` |
 | Password                | The password of the above user E.g. `diueh89ndys` |
 
@@ -241,15 +277,15 @@ Then choose a language and press the `Connect` button. It should connect success
 
 ## Where to go from here?
 
-And that's it folks. You now have the whole platform running successfully on your own computer for testing and/or developing purposes. Here are some useful links to go to from here:
+And that's it folks. You now have the whole platform running successfully on your own computer for testing and/or development purposes. Here are some useful links to go to from here:
 
-* [Deploying to Production](/sema-docs/deploying-to-production/tutorial)
-* [The Database Schema](/sema-docs/the-database-schema)
-* [The REST API Server](/sema-docs/rest-api/overview)
-* [The Dashboard client](/sema-docs/dashboard/overview)
+* [Deploying to Production](deploying-to-production.md)
+* [The Database Schema](the-database-schema.md)
+* [The REST API Server](rest-api/overview.md)
+* [The Dashboard client](back-office/overview.md)
 <!-- * [The POS client](/the-pos-client) -->
 
-Feel free to leave a comment down below for further questions and clarifications.
+Feel free to leave a comment down below for questions and clarifications.
 
 [^windows-users]: No hard feelings Windows users but your system is a pain for developers
 [^db-password]: Hopefully you didn't use this password while setting up MySQL. But we won't judge you if you did ;)

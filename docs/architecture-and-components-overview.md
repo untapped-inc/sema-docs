@@ -7,9 +7,9 @@ In a nutshell, the clients communicate with the REST API to gather and send data
 
 Here are the technologies being used by each of them:
 
-- The web back office: Reactjs
-- The POS mobile client: React Native
-- The REST API: Nodejs and Expressjs
-- The Database: MySQL
+- The web **back office** client: Reactjs
+- The **POS** mobile client: React Native
+- The **REST API**: Nodejs and Expressjs
+- The **Database**: MySQL
 
 The POS mobile client works offline first.
