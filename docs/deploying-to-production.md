@@ -4,32 +4,22 @@ disqus: sema-docs
 
 This section is a tutorial on how to deploy the system in production mode. The previous section was about running it locally and we strongly recommend that you go through the process before you start with this one because they have a lot in common.
 
-In fact, we will not go over some details that we covered in that section, so please, [go through it](sema-docs/getting-started) if you haven't done so yet.
+In fact, this section is only meant to be a **best practices** tutorial when it comes to production deployment, so we will not go over some details that we covered in the Getting Started section, therefore, please, [go through it](getting-started.md) if you haven't done so yet.
 
-## Prerequisites
+!!! note
+    Unless otherwise noted, all the instructions below should happen on the cloud, on your own SSH server. Not your personal computer.
 
-* A linux server - preferably Ubuntu - with SSH access. We use [DigitalOcean](https://digitalocean.com).
-* Install nvm: Follow [this link](https://github.com/creationix/nvm#installation) for instructions.
-* Install latest LTS version of Node and npm: `nvm install --lts`
-* Install Yarn: `npm i -g yarn`
-* Install MySQL: Follow [this link for Ubuntu 16.04](https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-16-04) Or find the right turorial for your version of Ubuntu.
-* Install react-scripts (To be able to build the client): `yarn global add react-scripts`
-* Fork the project repo through Github: Follow [this link](https://help.github.com/articles/fork-a-repo/) for instructions.
-* Nginx (Reverse Proxy): `sudo apt install nginx`
-* Pm2 (Robust Process Manager): `yarn global add pm2`
-* Clone your new Git repo to your server: `git clone https://github.com/YOUR-USERNAME/sema-core.git` - Make sure to change ==YOUR-USERNAME== to your Github username.
-* Move into your new folder: `cd sema-core`
-* From this point on, we expect that you are in the root directory of the project.
+## The SSH Server
 
-## Deploying
+### Prerequisites 1
 
-Assuming you have a Linux server ready and you've installed all the necessary prerequisites *correctly*, let's get started.
+From this point of this tutorial, here's what you'll need to follow along:
 
-### Server Setup
+* A linux server - preferably Ubuntu - with SSH access. We recommend [DigitalOcean](https://digitalocean.com)
 
-The SSH server is ready but it's not setup yet, let's get this taken care of.
+### Creating a Sudo User
 
-#### 1. Creating a Sudo User
+Assuming you got yourself an SSH server with root access, let's configure it.
 
 Follow those steps to create a new sudo user so you don't have to login as root:
 
@@ -100,7 +90,7 @@ usermod -aG sudo username
     ssh username@SERVER_IP_ADDRESS
     ```
 
-#### 2. Generating and Linking an SSH Key to Your Github Account
+### Generating and Linking an SSH Key to Your Github Account
 
 This one is an optional step. Linking an SSH key to your Github account will save you time when pulling from Github. It won't ask you for a password anymore.
 
@@ -111,12 +101,20 @@ This one is an optional step. Linking an SSH key to your Github account will sav
 
 This will also make your connection with Github even more secure.
 
-Github already has some great documentation for those:
+Github already has great documentation for those:
 
 1. Generating a new SSH key: [Github Docs](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/#platform-linux)
 2. Adding/Linking an SSH key to your Github account: [Github docs](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/#platform-linux)
 
-### MySQL Setup
+## The Database
+
+### Prerequisites 2
+
+From this point of this tutorial, here's what you'll need to follow along:
+
+* Install MySQL: Follow [this link for Ubuntu 16.04](https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-16-04) Or find the right turorial for your version of Ubuntu.
+
+### MySQL Secure Installation
 
 While installing MySQL, you should have received a prompt to enter a password for the root MySQL user. You will need it for subsequent root connections.
 
@@ -130,7 +128,7 @@ mysql_secure_installation
     
     Whatever you do here won't affect our deployment.
 
-#### Creating a new user and granting permissions
+### Creating a new user and granting permissions
 
 * Connect to the MySQL server as root:
 
@@ -176,40 +174,72 @@ exit
 mysqk -uUSERNAME -p
 ```
 
-### Configurations
+Now that your database is ready for production use, follow the instructions [over there](getting-started.md) to populate the basic data in its tables.
 
-Let's now setup the configuration file, follow the instructions in [this sub-section](/sema-docs/getting-started/#configurations).
+## Configurations
 
-### Building the dashboard client
+Let's now setup the configuration file, follow the instructions in [this sub-section](getting-started.md#configurations_1).
+
+## The Web Back Office Client
+
+### Prerequisites 3
+
+From this point of this tutorial, here's what you'll need to follow along:
+
+* Install nvm: Follow [this link](https://github.com/creationix/nvm#installation) for instructions.
+* Install latest LTS version of Node and npm: `nvm install --lts`
+* Install Yarn: `npm i -g yarn`
+* Install react-scripts (To be able to build the client): `yarn global add react-scripts`
+* Nginx (Reverse Proxy): `sudo apt install nginx`
+* Pm2 (Robust and easy to use process manager): `yarn global add pm2`
+* Create a new root directory to contain the whole project: `mkdir sema`
+* Move into the root directory: `cd sema`
+* Create a new repository by forking the official web back office repo through Github: Follow [this link](https://help.github.com/articles/fork-a-repo/) for instructions. Link to the repo: https://github.com/untapped-inc/sema-back-office-web
+* Clone your new repository to a local directory: `git clone https://github.com/YOUR-USERNAME/sema-back-office-web.git` - Make sure to change ==YOUR-USERNAME== to your Github username or the one you chose to fork the repo for
+* Move into the root directory of the web back office: `cd sema-back-office-web`
+* Install react-scripts (To be able to run the client): `yarn global add react-scripts`
+* From this point on, we expect that you are in the root directory of the web back office
+
+### Building the client
 
 Let's keep going by creating an optimized production build of the dashboard client:
 
-* Move into the `report_client` directory: `cd report_client`
 * Install client dependencies: `yarn`
 * Build the client: `yarn build`
 
 !!! info ""
-    If you get a fatal error about not having enough memory while building the client, just add this - `GENERATE_SOURCEMAP=false` - to the .env file of the `report_client` directory and then run yarn build again:
+    If you get a fatal error about not having enough memory while building the client, just add this - `GENERATE_SOURCEMAP=false` - to the .env file of the web back office directory and then run yarn build again:
     
     `echo 'GENERATE_SOURCEMAP=false' >> .env && yarn build`
-* Create a new `public_react` folder into the `report_server` directory: 
+
+## The REST API
+
+### Prerequisites 4
+
+From this point of this tutorial, here's what you'll need to follow along:
+
+* Assuming you are currently in the `sema-back-office-web` directory, move back into the root directory: `cd ..`
+* Create a new repository by forking the official REST API repo through Github: Follow [this link](https://help.github.com/articles/fork-a-repo/) for instructions. Link to the repo: https://github.com/untapped-inc/sema-core
+* Clone your new repository to a local directory: `git clone https://github.com/YOUR-USERNAME/sema-core.git` - Make sure to change ==YOUR-USERNAME== to your Github username or the one you chose to fork the repo for
+* Move into the root directory of the REST API: `cd sema-core`
+* From this point on, we expect that you are in the root directory of the REST API
+
+### Serving the REST API
+
+Now that we have the Back Office client ready to be served, let's:
+
+* Create a new `public_react` directory: 
 
 ```
-mkdir ../report_server/public_react
+mkdir public_react
 ```
 
-* Copy the entire build folder from `report_client/build` to the `report_server/public_react` folder:
+* Copy the entire build directory from the back office client `build` dir to the `public_react` directory:
 
 ```
-cp -rf ./build ../report_server/public_react
+cp -rf ../sema-back-office-web/build ./public_react
 ```
-
-### Serving the API and the dashboard client
-
-Now that we have the dashboard client ready to be served, let's:
-
-* Switch to the `report_server` directory: `cd ../report_server`
-* Assuming you've [configured your `.env` file correctly](/sema-docs/getting-started/#configurations), install server dependencies: `yarn`
+* Assuming you've [configured your `.env` file correctly](getting-started.md#configurations_1), install server dependencies: `yarn`
 * Start the server with PM2: `pm2 start bin/www --name sema-server`.
 
 !!! note ""
@@ -266,25 +296,25 @@ curl http://YOUR-SERVER-IP-ADDRESS/untapped/health-check
     
     You can now setup DNS zone records for your server.
 
-### Building the POS APK
+## The POS APK
 
 We will now build a customized version of the POS app.
 
 !!! info ""
     For this part, do not do it on the SSH server. Do it locally on your development machine.
 
-#### Customizing
+### Customizing
 
 Customizing the POS app for your SWE is a breeze. Let's get to it.
 
-##### Setting up
+#### Setting up
 
 * Follow the Android setup steps at [the official react native  docs](https://facebook.github.io/react-native/docs/getting-started.html#content). Make sure you select the appropriate tabs in the instructions.
     * "Building Projects with Native Code"
     * "Development OS: macOS or Windows or Linux.
     * Target OS: Android"
 
-##### Renaming the POS app
+#### Renaming the POS app
 
 To rename the POS app, simply use our `rename` yarn/npm script.
 
@@ -303,7 +333,7 @@ yarn rename APPNAME "ON-SCREEN APP NAME"
     yarn rename JIBUPOS "SEMA Jibu"
     ```
 
-##### Rebranding the POS app
+#### Rebranding the POS app
 
 Rebranding involves changing the logos on the POS app, the on-screen app logo and the background of the login screen.
 
@@ -400,7 +430,7 @@ Now that you have SEMA running successfully for your SWE. Here are some interest
 * <a href="https://gitter.im/sema-dev/" target="_blank">Join the community chat</a> so you can have 24/7 support for free from both the community and the core developers of SEMA.
 * [The Database Schema](/sema-docs/the-database-schema)
 * [The REST API Server](/sema-docs/rest-api/overview)
-* [The Dashboard client](/sema-docs/dashboard/overview)
+* [The Back Office Client](/sema-docs/dashboard/overview)
 <!-- * [The POS client](/the-pos-client) -->
 
 Feel free to leave a comment down below for any questions and clarifications.
