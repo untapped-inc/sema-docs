@@ -42,7 +42,7 @@
     
     
       
-        <title>Getting Started - SEMA Technical Documentation</title>
+        <title>Getting Started - SEMA Documentation</title>
       
     
     
@@ -111,7 +111,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="https://untapped-inc.github.io/sema-docs/" title="SEMA Technical Documentation" class="md-header-nav__button md-logo">
+        <a href="https://untapped-inc.github.io/sema-docs/" title="SEMA Documentation" class="md-header-nav__button md-logo">
           
             <img src="../assets/images/untapped-favicon.png" width="24" height="24">
           
@@ -125,7 +125,7 @@
           
             
               <span class="md-header-nav__topic">
-                SEMA Technical Documentation
+                SEMA Documentation
               </span>
               <span class="md-header-nav__topic">
                 Getting Started
@@ -207,12 +207,12 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="https://untapped-inc.github.io/sema-docs/" title="SEMA Technical Documentation" class="md-nav__button md-logo">
+    <a href="https://untapped-inc.github.io/sema-docs/" title="SEMA Documentation" class="md-nav__button md-logo">
       
         <img src="../assets/images/untapped-favicon.png" width="48" height="48">
       
     </a>
-    SEMA Technical Documentation
+    SEMA Documentation
   </label>
   
     <div class="md-nav__source">
@@ -255,6 +255,18 @@
       
       
 
+
+  <li class="md-nav__item">
+    <a href="../architecture-and-components-overview/" title="Architecture and Components Overview" class="md-nav__link">
+      Architecture and Components Overview
+    </a>
+  </li>
+
+    
+      
+      
+      
+
   
 
 
@@ -284,19 +296,26 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" title="Prerequisites" class="md-nav__link">
-    Prerequisites
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#setting-up-the-database" title="Setting up the Database" class="md-nav__link">
-    Setting up the Database
+  <a href="#the-database" title="The Database" class="md-nav__link">
+    The Database
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prerequisites-1" title="Prerequisites 1" class="md-nav__link">
+    Prerequisites 1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configurations" title="Configurations" class="md-nav__link">
+    Configurations
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#creating-the-database" title="Creating the database" class="md-nav__link">
@@ -318,30 +337,90 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#configurations" title="Configurations" class="md-nav__link">
+  <a href="#the-rest-api-server" title="The REST API Server" class="md-nav__link">
+    The REST API Server
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prerequisites-2" title="Prerequisites 2" class="md-nav__link">
+    Prerequisites 2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configurations_1" title="Configurations" class="md-nav__link">
     Configurations
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#running-the-server" title="Running the server" class="md-nav__link">
     Running the server
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#running-the-dashboard-client" title="Running the dashboard client" class="md-nav__link">
-    Running the dashboard client
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#running-the-pos-client" title="Running the POS client" class="md-nav__link">
-    Running the POS client
+  <a href="#the-back-office-web-client" title="The Back Office Web Client" class="md-nav__link">
+    The Back Office Web Client
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prerequisites-3" title="Prerequisites 3" class="md-nav__link">
+    Prerequisites 3
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-the-back-office-web-client" title="Running the Back Office Web Client" class="md-nav__link">
+    Running the Back Office Web Client
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-pos-mobile-client" title="The POS Mobile Client" class="md-nav__link">
+    The POS Mobile Client
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prerequisites-4" title="Prerequisites 4" class="md-nav__link">
+    Prerequisites 4
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-the-pos-mobile-client" title="Running the POS mobile client" class="md-nav__link">
+    Running the POS mobile client
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -401,630 +480,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../the-database-schema/" title="The Database Schema" class="md-nav__link">
-      The Database Schema
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
-    
-    <label class="md-nav__link" for="nav-6">
-      The REST API Server
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-6">
-        The REST API Server
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../rest-api/overview/" title="Overview" class="md-nav__link">
-      Overview
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-2" type="checkbox" id="nav-6-2">
-    
-    <label class="md-nav__link" for="nav-6-2">
-      General
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-6-2">
-        General
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../rest-api/general/health-check/" title="sema/health-check" class="md-nav__link">
-      sema/health-check
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../rest-api/general/login/" title="sema/login" class="md-nav__link">
-      sema/login
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../rest-api/general/kiosks/" title="sema/kiosks" class="md-nav__link">
-      sema/kiosks
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../rest-api/general/products/" title="sema/products" class="md-nav__link">
-      sema/products
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../rest-api/general/sales-channels/" title="sema/sales-channels" class="md-nav__link">
-      sema/sales-channels
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../rest-api/general/customer-types/" title="sema/customer-types" class="md-nav__link">
-      sema/customer-types
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-3" type="checkbox" id="nav-6-3">
-    
-    <label class="md-nav__link" for="nav-6-3">
-      Point of Sale (POS) specific
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-6-3">
-        Point of Sale (POS) specific
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../rest-api/pos/customers/" title="sema/site/customers" class="md-nav__link">
-      sema/site/customers
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../rest-api/pos/receipts/" title="sema/site/receipts" class="md-nav__link">
-      sema/site/receipts
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../rest-api/pos/product-mrps/" title="sema/site/product-mrps" class="md-nav__link">
-      sema/site/product-mrps
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-4" type="checkbox" id="nav-6-4">
-    
-    <label class="md-nav__link" for="nav-6-4">
-      Dashboard/Reports specific
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-6-4">
-        Dashboard/Reports specific
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../rest-api/dashboard/customer-summary/" title="sema/dashboard/site/customer-summary" class="md-nav__link">
-      sema/dashboard/site/customer-summary
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../rest-api/dashboard/receipt-summary/" title="sema/dashboard/site/receipt-summary" class="md-nav__link">
-      sema/dashboard/site/receipt-summary
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../rest-api/dashboard/sales-summary/" title="sema/dashboard/site/sales-summary" class="md-nav__link">
-      sema/dashboard/site/sales-summary
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../rest-api/dashboard/water-summary/" title="sema/dashboard/site/water-summary" class="md-nav__link">
-      sema/dashboard/site/water-summary
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../rest-api/dashboard/water-chart/" title="sema/dashboard/site/water-chart" class="md-nav__link">
-      sema/dashboard/site/water-chart
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../rest-api/dashboard/sales-by-channel-history/" title="sema/dashboard/site/sales-by-channel-history" class="md-nav__link">
-      sema/dashboard/site/sales-by-channel-history
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
-    
-    <label class="md-nav__link" for="nav-7">
-      The Dashboard Client
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-7">
-        The Dashboard Client
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../dashboard/overview/" title="Overview" class="md-nav__link">
-      Overview
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../dashboard/redux/" title="Redux" class="md-nav__link">
-      Redux
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../dashboard/water-operations/" title="Water Operations" class="md-nav__link">
-      Water Operations
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../dashboard/sales/" title="Sales" class="md-nav__link">
-      Sales
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../dashboard/volumes/" title="Volumes" class="md-nav__link">
-      Volumes
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../dashboard/demographics/" title="Demographics" class="md-nav__link">
-      Demographics
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
-    
-    <label class="md-nav__link" for="nav-8">
-      The POS Mobile Client
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-8">
-        The POS Mobile Client
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../pos/overview/" title="Overview" class="md-nav__link">
-      Overview
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-2" type="checkbox" id="nav-8-2">
-    
-    <label class="md-nav__link" for="nav-8-2">
-      Components
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-8-2">
-        Components
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-2-1" type="checkbox" id="nav-8-2-1">
-    
-    <label class="md-nav__link" for="nav-8-2-1">
-      General
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-8-2-1">
-        General
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../pos/general/Login/" title="Login" class="md-nav__link">
-      Login
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
-    
-    <label class="md-nav__link" for="nav-9">
-      Release Notes
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-9">
-        Release Notes
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-1" type="checkbox" id="nav-9-1">
-    
-    <label class="md-nav__link" for="nav-9-1">
-      Dashboard
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-9-1">
-        Dashboard
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../release-notes/dashboard/0.0.0.7/" title="0.0.0.7" class="md-nav__link">
-      0.0.0.7
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-2" type="checkbox" id="nav-9-2">
-    
-    <label class="md-nav__link" for="nav-9-2">
-      POS
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-9-2">
-        POS
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../release-notes/pos/0.4.2/" title="0.4.2" class="md-nav__link">
-      0.4.2
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../release-notes/pos/0.3.2/" title="0.3.2" class="md-nav__link">
-      0.3.2
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../release-notes/pos/0.3.1/" title="0.3.1" class="md-nav__link">
-      0.3.1
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../release-notes/pos/0.0.8/" title="0.0.8" class="md-nav__link">
-      0.0.8
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
     <a href="../license/" title="License" class="md-nav__link">
       License
     </a>
@@ -1052,19 +507,26 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" title="Prerequisites" class="md-nav__link">
-    Prerequisites
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#setting-up-the-database" title="Setting up the Database" class="md-nav__link">
-    Setting up the Database
+  <a href="#the-database" title="The Database" class="md-nav__link">
+    The Database
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prerequisites-1" title="Prerequisites 1" class="md-nav__link">
+    Prerequisites 1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configurations" title="Configurations" class="md-nav__link">
+    Configurations
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#creating-the-database" title="Creating the database" class="md-nav__link">
@@ -1086,30 +548,90 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#configurations" title="Configurations" class="md-nav__link">
+  <a href="#the-rest-api-server" title="The REST API Server" class="md-nav__link">
+    The REST API Server
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prerequisites-2" title="Prerequisites 2" class="md-nav__link">
+    Prerequisites 2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configurations_1" title="Configurations" class="md-nav__link">
     Configurations
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#running-the-server" title="Running the server" class="md-nav__link">
     Running the server
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#running-the-dashboard-client" title="Running the dashboard client" class="md-nav__link">
-    Running the dashboard client
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#running-the-pos-client" title="Running the POS client" class="md-nav__link">
-    Running the POS client
+  <a href="#the-back-office-web-client" title="The Back Office Web Client" class="md-nav__link">
+    The Back Office Web Client
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prerequisites-3" title="Prerequisites 3" class="md-nav__link">
+    Prerequisites 3
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-the-back-office-web-client" title="Running the Back Office Web Client" class="md-nav__link">
+    Running the Back Office Web Client
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-pos-mobile-client" title="The POS Mobile Client" class="md-nav__link">
+    The POS Mobile Client
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prerequisites-4" title="Prerequisites 4" class="md-nav__link">
+    Prerequisites 4
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-the-pos-mobile-client" title="Running the POS mobile client" class="md-nav__link">
+    Running the POS mobile client
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1150,23 +672,21 @@
                 <h1 id="getting-started-running-it-locally">Getting Started <small>Running it locally</small><a class="headerlink" href="#getting-started-running-it-locally" title="Permanent link">&para;</a></h1>
 <p>This section is a tutorial on how to get you started with setting up the platform on your system locally so you can test it.</p>
 <div class="admonition note">
-<p>We cover only *nix systems like Linux and OS X. Windows users will need to figure out alternatives on their own.<sup id="fnref:windows-users"><a class="footnote-ref" href="#fn:windows-users" rel="footnote">1</a></sup></p>
+<p class="admonition-title">Windows Users</p>
+<p>We only cover *nix systems like Linux and OS X <strong>for now</strong>. Windows users will need to figure out alternatives on their own.<sup id="fnref:windows-users"><a class="footnote-ref" href="#fn:windows-users" rel="footnote">1</a></sup></p>
 </div>
-<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<h2 id="the-database">The Database<a class="headerlink" href="#the-database" title="Permanent link">&para;</a></h2>
+<p>Let's get started with the database.</p>
+<h3 id="prerequisites-1">Prerequisites 1<a class="headerlink" href="#prerequisites-1" title="Permanent link">&para;</a></h3>
+<p>From this point of this tutorial, here's what you'll need to follow along:</p>
 <ul>
-<li>Download MySQL Workbench: Get it <a href="https://dev.mysql.com/downloads/workbench/">here</a>.</li>
+<li>Install MySQL: Follow <a href="https://dev.mysql.com/doc/refman/5.7/en/installing.html">this link</a> for instructions for your system. Make sure you create an admin user, or using <code class="codehilite">root</code> is fine too.<sup id="fnref:using-root"><a class="footnote-ref" href="#fn:using-root" rel="footnote">3</a></sup></li>
 <li>Install nvm: Follow <a href="https://github.com/creationix/nvm#installation">this link</a> for instructions.</li>
 <li>Install latest LTS version of Node and npm: <code class="codehilite">nvm install --lts</code></li>
 <li>Install Yarn: <code class="codehilite">npm i -g yarn</code></li>
-<li>Install react-scripts (To be able to run the client): <code class="codehilite">yarn global add react-scripts</code></li>
-<li>Install MySQL: Follow <a href="https://dev.mysql.com/doc/refman/5.7/en/installing.html">this link</a> for instructions for your system. Make sure you create an admin user, or using <code class="codehilite">root</code> is fine too.<sup id="fnref:using-root"><a class="footnote-ref" href="#fn:using-root" rel="footnote">3</a></sup></li>
-<li>Fork the project repo through Github: Follow <a href="https://help.github.com/articles/fork-a-repo/">this link</a> for instructions.</li>
-<li>Clone your new Git repo to a local folder: <code class="codehilite">git clone https://github.com/YOUR-USERNAME/sema-core.git</code> - Make sure to change <mark>YOUR-USERNAME</mark> to your Github username.</li>
-<li>Move into your new folder: <code class="codehilite">cd sema-core</code></li>
-<li>From this point on, we expect that you are in the root directory of the project.</li>
 </ul>
-<h2 id="setting-up-the-database">Setting up the Database<a class="headerlink" href="#setting-up-the-database" title="Permanent link">&para;</a></h2>
-<p>Assuming you successfully installed MySQL on your system and created an admin user, let's start creating the <code class="codehilite">sema_core</code> database and populating some sample data for the project.</p>
+<h3 id="configurations">Configurations<a class="headerlink" href="#configurations" title="Permanent link">&para;</a></h3>
+<p>Assuming you've successfully installed MySQL on your system and created an admin user (not <strong>root</strong>), let's start creating the <code class="codehilite">sema_core</code> database and populating the basic data for the project.</p>
 <h3 id="creating-the-database">Creating the database<a class="headerlink" href="#creating-the-database" title="Permanent link">&para;</a></h3>
 <p>Here are the steps to follow:</p>
 <ul>
@@ -1174,17 +694,11 @@
 <li>Go to File &gt; Open SQL Script...</li>
 <li>Find your repository folder and choose the file database &gt; create_schema.sql</li>
 <li>In the editor, add these two lines at the top of the file:</li>
-</ul>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">CREATE</span> <span class="k">SCHEMA</span> <span class="n">sema_core</span><span class="p">;</span>
-<span class="n">USE</span> <span class="n">sema_core</span><span class="p">;</span>
-</pre></div>
-</td></tr></table>
-
-<p>Feel free to name the database however you want. For the rest of this tutorial, we will use <code class="codehilite">sema_core</code>, so make sure you remember to change it to yours.</p>
-<ul>
 <li>Go to Query &gt; Execute (All or Selection). It will run the script and create your new database</li>
 </ul>
+<div class="admonition note">
+<p>This will create a new database named <strong>sema_core</strong>. If you want to rename it, either use a tool like MySQL Workbench or make sure you edit the <code class="codehilite">create_schema.sql</code> file fromt this line: <code class="codehilite">CREATE SCHEMA sema_core;</code> before you Execute it.</p>
+</div>
 <h3 id="populating-the-required-tables">Populating the required tables<a class="headerlink" href="#populating-the-required-tables" title="Permanent link">&para;</a></h3>
 <p>Now that the database is created, let's populate some tables in there. Feel free to change the values to what you want, except where it's mentioned to keep them as is.</p>
 <ul>
@@ -1282,10 +796,6 @@
 </pre></div>
 </td></tr></table>
 
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Those two sales channels are required for now. Do not change them, except for the descriptions.</p>
-</div>
 <ul>
 <li>Next, add a couple of customers:</li>
 </ul>
@@ -1344,13 +854,26 @@
 </td></tr></table>
 
 <p>Your database is now ready.</p>
-<p>To learn more about the database schema, please <a href="/sema-docs/the-database-schema">click here</a>.</p>
-<h2 id="configurations">Configurations<a class="headerlink" href="#configurations" title="Permanent link">&para;</a></h2>
-<p>Before you can start running the clients and the server, you will need to first set the property values in the configuration file.</p>
+<p>To learn more about the database schema, please <a href="../the-database-schema/">click here</a>.</p>
+<h2 id="the-rest-api-server">The REST API Server<a class="headerlink" href="#the-rest-api-server" title="Permanent link">&para;</a></h2>
+<p>Let's move on to the REST API.</p>
+<h3 id="prerequisites-2">Prerequisites 2<a class="headerlink" href="#prerequisites-2" title="Permanent link">&para;</a></h3>
+<p>From this point of this tutorial, here's what you'll need to follow along:</p>
+<ul>
+<li>Create a new root directory to contain the whole project: <code class="codehilite">mkdir sema</code></li>
+<li>Move into the root directory: <code class="codehilite">cd sema</code></li>
+<li>Create a new repository by forking the official REST API repo through Github: Follow <a href="https://help.github.com/articles/fork-a-repo/">this link</a> for instructions. Link to the repo: https://github.com/untapped-inc/sema-core</li>
+<li>Clone your new repository to a local directory: <code class="codehilite">git clone https://github.com/YOUR-USERNAME/sema-core.git</code> - Make sure to change <mark>YOUR-USERNAME</mark> to your Github username or the one you chose to fork the repo for</li>
+<li>Move into the root directory of the REST API: <code class="codehilite">cd sema-core</code></li>
+<li>From this point on, we expect that you are in the root directory of the REST API</li>
+</ul>
+<h3 id="configurations_1">Configurations<a class="headerlink" href="#configurations_1" title="Permanent link">&para;</a></h3>
+<p>Before you can start running the server, you will need to first set the property values in the configurations file.</p>
 <div class="admonition info">
-<p>This configuration file is located in the root folder as <code class="codehilite"><span class="na">.example-env</span></code>. It's a dot file, so if you want to see it from your terminal, you need to add the <code class="codehilite">-a</code> flag to your ls: <code class="codehilite">ls -a</code>.</p>
+<p>This configurations file is located in the root directory of the REST API as <code class="codehilite"><span class="na">.example-env</span></code>. It's a dot file, so if you want to see it from your terminal, you need to add the <code class="codehilite">-a</code> flag to your ls: <code class="codehilite">ls -a</code>.</p>
 </div>
 <p>First, rename this file from <code class="codehilite"><span class="na">.example-env</span></code> to <code class="codehilite"><span class="na">.env</span></code>: <code class="codehilite">cp .example-env .env</code></p>
+<p>Then move it to the parent directory (which should be <code class="codehilite">sema</code> if you were following along): <code class="codehilite">mv .env ../.env</code></p>
 <p>Now open this <code class="codehilite"><span class="na">.env</span></code> file using your favorite text editor. These properties provide the necessary details for the clients and the server to access the database and setup a few dependencies. Use the DB credentials you created while installing and setting up MySQL.</p>
 <table>
 <thead>
@@ -1394,7 +917,7 @@
 </tr>
 <tr>
 <td>BCRYPT_SALT_ROUNDS</td>
-<td>How much time is needed to calculate a single BCrypt hash - Between 8 and 12 is recommended. Used for encrypting passwords for users. E.g. <code class="codehilite">10</code></td>
+<td>How much time is needed to calculate a single BCrypt hash - Between 8 and 12 is recommended. Used for encrypting passwords for users. Remember, changing this requires that you use the same salt rounds value when creating a new password on the <code class="codehilite">user</code> table. E.g. <code class="codehilite">10</code></td>
 </tr>
 </tbody>
 </table>
@@ -1402,10 +925,9 @@
 <p class="admonition-title">Danger</p>
 <p>We <strong>Strongly</strong> recommend that you do not to push the <code class="codehilite"><span class="na">.env</span></code> file to your repository after adding the correct configuration property values. For security measures, we added it to the project's <code class="codehilite"><span class="na">.gitignore</span></code> file so that git can always ignore it. So you would need to really want to push it to be able to do so.</p>
 </div>
-<h2 id="running-the-server">Running the server<a class="headerlink" href="#running-the-server" title="Permanent link">&para;</a></h2>
-<p>Now that your database and your configurations are setup. Let's run the server, shall we?</p>
+<h3 id="running-the-server">Running the server<a class="headerlink" href="#running-the-server" title="Permanent link">&para;</a></h3>
+<p>Now that your database and your configurations are all set. Let's run the server, shall we?</p>
 <ul>
-<li>Move into the <code class="codehilite">report_server</code> directory: <code class="codehilite">cd report_server</code></li>
 <li>Install dependencies: <code class="codehilite">yarn</code></li>
 <li>Run the server: <code class="codehilite">yarn start</code></li>
 </ul>
@@ -1421,20 +943,41 @@
 <p class="admonition-title">Note</p>
 <p>The clients are configured to access the server on port 3001.</p>
 </div>
-<p>To learn more about the REST API server, please <a href="/sema-docs/rest-api/overview">click here</a>.</p>
-<h2 id="running-the-dashboard-client">Running the dashboard client<a class="headerlink" href="#running-the-dashboard-client" title="Permanent link">&para;</a></h2>
-<p>Now it's time to run the dashboard client. Here are the steps to follow:</p>
+<p>To learn more about the REST API server, please <a href="../rest-api/overview/">click here</a>.</p>
+<h2 id="the-back-office-web-client">The Back Office Web Client<a class="headerlink" href="#the-back-office-web-client" title="Permanent link">&para;</a></h2>
+<p>Time to run the back office.</p>
+<h3 id="prerequisites-3">Prerequisites 3<a class="headerlink" href="#prerequisites-3" title="Permanent link">&para;</a></h3>
+<p>From this point of this tutorial, here's what you'll need to follow along:</p>
 <ul>
-<li>Move into the <code class="codehilite">report_client</code> directory: <code class="codehilite">cd report_client</code></li>
+<li>Assuming you are currently in the <code class="codehilite">sema-core</code> directory, move back into the root directory: <code class="codehilite">cd ..</code></li>
+<li>Create a new repository by forking the official back office web client repo through Github: Follow <a href="https://help.github.com/articles/fork-a-repo/">this link</a> for instructions. Link to the repo: https://github.com/untapped-inc/sema-back-office-web</li>
+<li>Clone your new repository to a local directory: <code class="codehilite">git clone https://github.com/YOUR-USERNAME/sema-back-office-web.git</code> - Make sure to change <mark>YOUR-USERNAME</mark> to your Github username or the one you chose to fork the repo for</li>
+<li>Move into the root directory of the back office web client: <code class="codehilite">cd sema-back-office-web</code></li>
+<li>Install react-scripts (To be able to run the client): <code class="codehilite">yarn global add react-scripts</code></li>
+<li>From this point on, we expect that you are in the root directory of the back office web client</li>
+</ul>
+<h3 id="running-the-back-office-web-client">Running the Back Office Web Client<a class="headerlink" href="#running-the-back-office-web-client" title="Permanent link">&para;</a></h3>
+<p>Now it's time to run the back office client. Here are the steps to follow:</p>
+<ul>
 <li>Install dependencies: <code class="codehilite">yarn</code></li>
 <li>Run the client: <code class="codehilite">yarn start</code></li>
 </ul>
 <p>It should start running at http://localhost:3000</p>
-<p>Notice the port numer: 3000</p>
-<p>Go to the above link and test the client by logging in with the user you created during the <a href="#setting-up-the-database">database setup</a>.</p>
-<p>To learn more about the dashboard client, please <a href="/sema-docs/dashboard/overview">click here</a>.</p>
-<h2 id="running-the-pos-client">Running the POS client<a class="headerlink" href="#running-the-pos-client" title="Permanent link">&para;</a></h2>
+<p>Notice the port number: 3000</p>
+<p>Go to the above link and test the client by logging in with the user credentials you created during the <a href="#populating-the-required-tables">database setup</a>.</p>
+<p>To learn more about the back office, please <a href="../back-office/overview/">click here</a>.</p>
+<h2 id="the-pos-mobile-client">The POS Mobile Client<a class="headerlink" href="#the-pos-mobile-client" title="Permanent link">&para;</a></h2>
 <p>Finally, let's run the POS client.</p>
+<h3 id="prerequisites-4">Prerequisites 4<a class="headerlink" href="#prerequisites-4" title="Permanent link">&para;</a></h3>
+<p>From this point of this tutorial, here's what you'll need to follow along:</p>
+<ul>
+<li>Assuming you are currently in the <code class="codehilite">sema-back-office-web</code> directory, move back into the root directory: <code class="codehilite">cd ..</code></li>
+<li>Create a new repository by forking the official POS mobile client repo through Github: Follow <a href="https://help.github.com/articles/fork-a-repo/">this link</a> for instructions. Link to the repo: https://github.com/untapped-inc/sema-pos-mobile</li>
+<li>Clone your new repository to a local directory: <code class="codehilite">git clone https://github.com/YOUR-USERNAME/sema-pos-mobile.git</code> - Make sure to change <mark>YOUR-USERNAME</mark> to your Github username or the one you chose to fork the repo for</li>
+<li>Move into the root directory of the POS mobile client: <code class="codehilite">cd sema-pos-mobile</code></li>
+<li>From this point on, we expect that you are in the root directory of the POS mobile client</li>
+</ul>
+<h3 id="running-the-pos-mobile-client">Running the POS mobile client<a class="headerlink" href="#running-the-pos-mobile-client" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Follow the Android setup steps at <a href="https://facebook.github.io/react-native/docs/getting-started.html#content">the official react native  docs</a>. Make sure you select the appropriate tabs in the instructions.<ul>
 <li>"Building Projects with Native Code"</li>
@@ -1442,7 +985,6 @@
 <li>Target OS: Android"</li>
 </ul>
 </li>
-<li>Move into the mobile_client directory: <code class="codehilite">cd mobile_client</code></li>
 <li>Install dependencies: <code class="codehilite">yarn</code></li>
 <li>Create and open an emulator either by using <a href="https://www.genymotion.com">Genymotion</a> or the <a href="https://developer.android.com/studio/run/emulator">Android Studio AVD</a><ul>
 <li>Use at least a 7 inch tablet with a minimum Android version of 6.0.0</li>
@@ -1465,7 +1007,7 @@
 </tr>
 <tr>
 <td>Site</td>
-<td>The kiosk that we created during <a href="#setting-up-the-database">database setup</a>. E.g.: <code class="codehilite">Bois9</code></td>
+<td>The kiosk that we created during <a href="#populating-the-required-tables">database setup</a>. E.g.: <code class="codehilite">Bois9</code></td>
 </tr>
 <tr>
 <td>Username or Email</td>
@@ -1481,15 +1023,15 @@
 <!-- To learn more about the POS client, please [click here](/the-pos-client). -->
 
 <h2 id="where-to-go-from-here">Where to go from here?<a class="headerlink" href="#where-to-go-from-here" title="Permanent link">&para;</a></h2>
-<p>And that's it folks. You now have the whole platform running successfully on your own computer for testing and/or developing purposes. Here are some useful links to go to from here:</p>
+<p>And that's it folks. You now have the whole platform running successfully on your own computer for testing and/or development purposes. Here are some useful links to go to from here:</p>
 <ul>
-<li><a href="/sema-docs/deploying-to-production/tutorial">Deploying to Production</a></li>
-<li><a href="/sema-docs/the-database-schema">The Database Schema</a></li>
-<li><a href="/sema-docs/rest-api/overview">The REST API Server</a></li>
-<li><a href="/sema-docs/dashboard/overview">The Dashboard client</a>
+<li><a href="../deploying-to-production/">Deploying to Production</a>
+<!-- * <a href="the-database-schema.md">The Database Schema</a> -->
+<!-- * <a href="rest-api/overview.md">The REST API Server</a> -->
+<!-- * <a href="back-office/overview.md">The Dashboard client</a> -->
 <!-- * <a href="/the-pos-client">The POS client</a> --></li>
 </ul>
-<p>Feel free to leave a comment down below for further questions and clarifications.</p>
+<p>Feel free to leave a comment down below for questions and clarifications.</p>
 <div class="footnote">
 <hr />
 <ol>
@@ -1542,7 +1084,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href=".." title="Introduction" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../architecture-and-components-overview/" title="Architecture and Components Overview" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1551,7 +1093,7 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Introduction
+                Architecture and Components Overview
               </span>
             </div>
           </a>
