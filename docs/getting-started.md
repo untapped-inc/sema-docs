@@ -31,7 +31,6 @@ Here are the steps to follow:
 * Open your MySQL Workbench
 * Go to File > Open SQL Script...
 * Find your repository folder and choose the file database > create_schema.sql
-* In the editor, add these two lines at the top of the file:
 * Go to Query > Execute (All or Selection). It will run the script and create your new database
 
 !!! note ""
