@@ -5,9 +5,9 @@
 
 In a nutshell, the clients communicate with the REST API to gather and send data **from** and **to** the database.
 
-Here are the technologies being used by each of the components that make up SEMA:
+Here are the technologies currently being used by each of the components that make up SEMA:
 
-- The web **back office** client: Reactjs
+- The **back office** web client: Reactjs
 - The **POS** mobile client: React Native
 - The **REST API**: Nodejs and Expressjs
 - The **Database**: MySQL
