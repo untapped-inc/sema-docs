@@ -36,46 +36,46 @@ nav:
   - Getting Started: getting-started.md
   - Deploying to Production: deploying-to-production.md
   - Keeping your fork up to date: staying-in-harmony.md
-    # - Database: Migrating schema changes from development to deployment: deploying-to-production/database-migrating.md
-  - The Database Schema: the-database-schema.md
-  - The REST API Server:
-    - Overview: rest-api/overview.md
-    - General:
-      - sema/health-check: rest-api/general/health-check.md
-      - sema/login: rest-api/general/login.md
-      - sema/kiosks: rest-api/general/kiosks.md
-      - sema/products: rest-api/general/products.md
-      - sema/sales-channels: rest-api/general/sales-channels.md
-      - sema/customer-types: rest-api/general/customer-types.md
-    - Point of Sale (POS) specific:
-      - sema/site/customers: rest-api/pos/customers.md
-      - sema/site/receipts: rest-api/pos/receipts.md
-      - sema/site/product-mrps: rest-api/pos/product-mrps.md
-    - Dashboard/Reports specific:
-      - sema/dashboard/site/customer-summary: rest-api/back-office/customer-summary.md
-      - sema/dashboard/site/receipt-summary: rest-api/back-office/receipt-summary.md
-      - sema/dashboard/site/sales-summary: rest-api/back-office/sales-summary.md
-      - sema/dashboard/site/water-summary: rest-api/back-office/water-summary.md
-      - sema/dashboard/site/water-chart: rest-api/back-office/water-chart.md
-      - sema/dashboard/site/sales-by-channel-history: rest-api/back-office/sales-by-channel-history.md
-  - The Back Office Client:
-    - Overview: back-office/overview.md
-    - Redux: back-office/redux.md
-    - Water Operations: back-office/water-operations.md
-    - Sales: back-office/sales.md
-    - Volumes: back-office/volumes.md
-    - Demographics: back-office/demographics.md
-  - The POS Mobile Client:
-    - Overview: pos/overview.md
-    - Components:
-      - General:
-        - Login: pos/general/Login.md
-  - Release Notes:
-    - POS:
-      - 0.4.2: release-notes/pos/0.4.2.md
-      - 0.3.2: release-notes/pos/0.3.2.md
-      - 0.3.1: release-notes/pos/0.3.1.md
-      - 0.0.8: release-notes/pos/0.0.8.md
+  # - Database: Migrating schema changes from development to deployment: deploying-to-production/database-migrating.md
+  # - The Database Schema: the-database-schema.md
+  # - The REST API Server:
+  #   - Overview: rest-api/overview.md
+  #   - General:
+  #     - sema/health-check: rest-api/general/health-check.md
+  #     - sema/login: rest-api/general/login.md
+  #     - sema/kiosks: rest-api/general/kiosks.md
+  #     - sema/products: rest-api/general/products.md
+  #     - sema/sales-channels: rest-api/general/sales-channels.md
+  #     - sema/customer-types: rest-api/general/customer-types.md
+  #   - Point of Sale (POS) specific:
+  #     - sema/site/customers: rest-api/pos/customers.md
+  #     - sema/site/receipts: rest-api/pos/receipts.md
+  #     - sema/site/product-mrps: rest-api/pos/product-mrps.md
+  #   - Dashboard/Reports specific:
+  #     - sema/dashboard/site/customer-summary: rest-api/back-office/customer-summary.md
+  #     - sema/dashboard/site/receipt-summary: rest-api/back-office/receipt-summary.md
+  #     - sema/dashboard/site/sales-summary: rest-api/back-office/sales-summary.md
+  #     - sema/dashboard/site/water-summary: rest-api/back-office/water-summary.md
+  #     - sema/dashboard/site/water-chart: rest-api/back-office/water-chart.md
+  #     - sema/dashboard/site/sales-by-channel-history: rest-api/back-office/sales-by-channel-history.md
+  # - The Back Office Client:
+  #   - Overview: back-office/overview.md
+  #   - Redux: back-office/redux.md
+  #   - Water Operations: back-office/water-operations.md
+  #   - Sales: back-office/sales.md
+  #   - Volumes: back-office/volumes.md
+  #   - Demographics: back-office/demographics.md
+  # - The POS Mobile Client:
+  #   - Overview: pos/overview.md
+  #   - Components:
+  #     - General:
+  #       - Login: pos/general/Login.md
+  # - Release Notes:
+  #   - POS:
+  #     - 0.4.2: release-notes/pos/0.4.2.md
+  #     - 0.3.2: release-notes/pos/0.3.2.md
+  #     - 0.3.1: release-notes/pos/0.3.1.md
+  #     - 0.0.8: release-notes/pos/0.0.8.md
   # - Contributing: contributing.md
   - License: license.md
 
