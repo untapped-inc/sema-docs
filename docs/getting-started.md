@@ -207,7 +207,7 @@ The version number may vary.
 
 To learn more about the REST API server, please [click here](rest-api/overview.md).
 
-## The Web Back Office
+## The Back Office Web Client
 
 Time to run the back office.
 
@@ -216,15 +216,15 @@ Time to run the back office.
 From this point of this tutorial, here's what you'll need to follow along:
 
 * Assuming you are currently in the `sema-core` directory, move back into the root directory: `cd ..`
-* Create a new repository by forking the official web back office repo through Github: Follow [this link](https://help.github.com/articles/fork-a-repo/) for instructions. Link to the repo: https://github.com/untapped-inc/sema-back-office-web
+* Create a new repository by forking the official back office web client repo through Github: Follow [this link](https://help.github.com/articles/fork-a-repo/) for instructions. Link to the repo: https://github.com/untapped-inc/sema-back-office-web
 * Clone your new repository to a local directory: `git clone https://github.com/YOUR-USERNAME/sema-back-office-web.git` - Make sure to change ==YOUR-USERNAME== to your Github username or the one you chose to fork the repo for
-* Move into the root directory of the web back office: `cd sema-back-office-web`
+* Move into the root directory of the back office web client: `cd sema-back-office-web`
 * Install react-scripts (To be able to run the client): `yarn global add react-scripts`
-* From this point on, we expect that you are in the root directory of the web back office
+* From this point on, we expect that you are in the root directory of the back office web client
 
-### Running the web back office
+### Running the Back Office Web Client
 
-Now it's time to run the back office. Here are the steps to follow:
+Now it's time to run the back office client. Here are the steps to follow:
 
 * Install dependencies: `yarn`
 * Run the client: `yarn start`
@@ -280,9 +280,9 @@ Then choose a language and press the `Connect` button. It should connect success
 And that's it folks. You now have the whole platform running successfully on your own computer for testing and/or development purposes. Here are some useful links to go to from here:
 
 * [Deploying to Production](deploying-to-production.md)
-* [The Database Schema](the-database-schema.md)
-* [The REST API Server](rest-api/overview.md)
-* [The Dashboard client](back-office/overview.md)
+<!-- * [The Database Schema](the-database-schema.md) -->
+<!-- * [The REST API Server](rest-api/overview.md) -->
+<!-- * [The Dashboard client](back-office/overview.md) -->
 <!-- * [The POS client](/the-pos-client) -->
 
 Feel free to leave a comment down below for questions and clarifications.
