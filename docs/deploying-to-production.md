@@ -180,7 +180,7 @@ Now that your database is ready for production use, follow the instructions [ove
 
 Let's now setup the configuration file, follow the instructions in [this sub-section](getting-started.md#configurations_1).
 
-## The Web Back Office Client
+## The Back Office Web Client
 
 ### Prerequisites 3
 
@@ -194,11 +194,11 @@ From this point of this tutorial, here's what you'll need to follow along:
 * Pm2 (Robust and easy to use process manager): `yarn global add pm2`
 * Create a new root directory to contain the whole project: `mkdir sema`
 * Move into the root directory: `cd sema`
-* Create a new repository by forking the official web back office repo through Github: Follow [this link](https://help.github.com/articles/fork-a-repo/) for instructions. Link to the repo: https://github.com/untapped-inc/sema-back-office-web
+* Create a new repository by forking the official back office web client repo through Github: Follow [this link](https://help.github.com/articles/fork-a-repo/) for instructions. Link to the repo: https://github.com/untapped-inc/sema-back-office-web
 * Clone your new repository to a local directory: `git clone https://github.com/YOUR-USERNAME/sema-back-office-web.git` - Make sure to change ==YOUR-USERNAME== to your Github username or the one you chose to fork the repo for
-* Move into the root directory of the web back office: `cd sema-back-office-web`
+* Move into the root directory of the back office web client: `cd sema-back-office-web`
 * Install react-scripts (To be able to run the client): `yarn global add react-scripts`
-* From this point on, we expect that you are in the root directory of the web back office
+* From this point on, we expect that you are in the root directory of the back office web client
 
 ### Building the client
 
@@ -208,7 +208,7 @@ Let's keep going by creating an optimized production build of the dashboard clie
 * Build the client: `yarn build`
 
 !!! info ""
-    If you get a fatal error about not having enough memory while building the client, just add this - `GENERATE_SOURCEMAP=false` - to the .env file of the web back office directory and then run yarn build again:
+    If you get a fatal error about not having enough memory while building the client, just add this - `GENERATE_SOURCEMAP=false` - to the .env file of the back office web client directory and then run yarn build again:
     
     `echo 'GENERATE_SOURCEMAP=false' >> .env && yarn build`
 
@@ -298,6 +298,16 @@ curl http://YOUR-SERVER-IP-ADDRESS/untapped/health-check
 
 ## The POS APK
 
+### Prerequisites 5
+
+From this point of this tutorial, here's what you'll need to follow along:
+
+* Assuming you are currently in the `sema-core` directory, move back into the root directory: `cd ..`
+* Create a new repository by forking the official POS mobile client repo through Github: Follow [this link](https://help.github.com/articles/fork-a-repo/) for instructions. Link to the repo: https://github.com/untapped-inc/sema-pos-mobile
+* Clone your new repository to a local directory: `git clone https://github.com/YOUR-USERNAME/sema-pos-mobile.git` - Make sure to change ==YOUR-USERNAME== to your Github username or the one you chose to fork the repo for
+* Move into the root directory of the POS mobile client: `cd sema-pos-mobile`
+* From this point on, we expect that you are in the root directory of the POS mobile client
+
 We will now build a customized version of the POS app.
 
 !!! info ""
@@ -309,7 +319,7 @@ Customizing the POS app for your SWE is a breeze. Let's get to it.
 
 #### Setting up
 
-* Follow the Android setup steps at [the official react native  docs](https://facebook.github.io/react-native/docs/getting-started.html#content). Make sure you select the appropriate tabs in the instructions.
+* Follow the Android setup steps at <a href="https://facebook.github.io/react-native/docs/getting-started.html#content" target="_blank">the official react native  docs</a>. Make sure you select the appropriate tabs in the instructions.
     * "Building Projects with Native Code"
     * "Development OS: macOS or Windows or Linux.
     * Target OS: Android"
@@ -327,7 +337,7 @@ yarn rename APPNAME "ON-SCREEN APP NAME"
 
     `APPNAME` is the internal name the Android application will use for the app.
 
-    `ON-SCREEN APP NAME` is the name the user will see on the screen once the app is installed on the device. Notice it's between quotes while `APPNAME` is not, the on-screen name can have spaces while the internal name cannot. i.e.:
+    `ON-SCREEN APP NAME` is the name the user will see on the screen once the app is installed on the device. Notice how it's between quotes while `APPNAME` is not, the on-screen name can have spaces while the internal name cannot. i.e.:
 
     ```
     yarn rename JIBUPOS "SEMA Jibu"
@@ -354,7 +364,7 @@ Follow those steps to change those images to your liking:
     Make sure you name your new image to `swe-login.jpg` or it will not show up on the POS app once it's built.
 
 !!! info
-    It your image is a `png` file, you can simply rename it to a `jpg` file, it will still work.
+    If your image is a `png` file, you can simply rename it to a `jpg` file, it will still work.
 
 * For the logo and on-screen app image, it must be a `png` file. Rename your new logo to `ic_launcher.png`
 * Go to the [NativeScrip Image Builder](http://nsimage.brosteins.com/) website
@@ -365,13 +375,13 @@ Follow those steps to change those images to your liking:
 It will download the app images to your computer as a `zip` file.
 
 * After extracting the `zip` file, rename the folders named `drawable-hdpi`, `drawable-mdpi`, `drawable-xhdpi` and `drawable-xxhdpi` to `mipmap-hdpi`, `mipmap-mdpi`, `mipmap-xhdpi` and `mipmap-xxhdpi` respectively.
-* Select and copy the 4 new folders you just renamed and paste them in the directory located at `mobile_client/android/app/src/main/res`. Replace the ones that were already there.
+* Select and copy the 4 new folders you just renamed and paste them in the directory located at `android/app/src/main/res`. Replace the ones that were already there.
 
 Your app is now ready to be built.
 
-#### Building
+### Building
 
-To build the POS apk file simply use the `build_sema_apk.sh` script in the `mobile_client` directory.
+To build the POS apk file simply use the `build_sema_apk.sh`.
 
 ```
 sh build_sema_apk.sh
@@ -415,9 +425,9 @@ And you should get a `BUILD_SUCCESSFUL` message at the end of the script output 
 You now have an APK file of your customized POS app.
 
 !!! info ""
-    The APK file is located at `mobile_client/android/app/build/outputs/apk/release`. It's named `app-release.apk`. Feel free to rename this file however you like.
+    The APK file is located at `android/app/build/outputs/apk/release`. It's named `app-release.apk`. Feel free to rename this file however you like.
 
-    The build script generated a `keystore` file at `mobile_client/android/app` named `sema-pos-key.keystore`.<br>You will need this file if you ever decide to host the APK file on the Google Play store. Without this file, you won't be able to send updates to the Play store for your app.
+    The build script generated a `keystore` file at `android/app` named `sema-pos-key.keystore`.<br>You will need this file if you ever decide to host the APK file on the Google Play store. Without this file, you won't be able to send updates to the Play store for your app.
 
 <!-- TODO: Add link to UI docs on how to connect to the server. -->
 
@@ -428,9 +438,9 @@ And that's it! You now have the whole platform running in production. Neat.
 Now that you have SEMA running successfully for your SWE. Here are some interesting links:
 
 * <a href="https://gitter.im/sema-dev/" target="_blank">Join the community chat</a> so you can have 24/7 support for free from both the community and the core developers of SEMA.
-* [The Database Schema](/sema-docs/the-database-schema)
-* [The REST API Server](/sema-docs/rest-api/overview)
-* [The Back Office Client](/sema-docs/dashboard/overview)
+<!-- * [The Database Schema](the-database-schema.md) -->
+<!-- * [The REST API Server](rest-api/overview.md) -->
+<!-- * [The Back Office Client](back-office/overview.md) -->
 <!-- * [The POS client](/the-pos-client) -->
 
 Feel free to leave a comment down below for any questions and clarifications.
