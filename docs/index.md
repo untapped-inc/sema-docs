@@ -6,6 +6,9 @@ See the <a href="http://semawater.org" target="_blank">official home page</a> fo
 
 [Click here](getting-started.md) to quickly get started.
 
+!!! warning "Under Construction"
+    This documentation currently goes under frequent updates. If you notice any missing part, it's probably being rewritten or updated at the moment.
+
 ## What is a Safe Water Enterprise?
 
 For those who just want to contribute to the codebase, you may want to know the impact of your contributions, so here's a quick background:
