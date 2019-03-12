@@ -15,6 +15,12 @@ Let's get started with the database.
 
 From this point of this tutorial, here's what you'll need to follow along:
 
+* Create a new root directory to contain the whole project: `mkdir sema`
+* Move into the root directory: `cd sema`
+* Create a new repository by forking the official database repo through Github: Follow [this link](https://help.github.com/articles/fork-a-repo/) for instructions. Link to the repo: https://github.com/untapped-inc/sema-database
+* Clone your new repository to a local directory: `git clone https://github.com/YOUR-USERNAME/sema-database.git` - Make sure to change ==YOUR-USERNAME== to your Github username or the one you chose to fork the repo for
+* Move into the root directory of the SEMA database: `cd sema-database`
+* From this point on, we expect that you are in the root directory of the SEMA database
 * Install MySQL: Follow [this link](https://dev.mysql.com/doc/refman/5.7/en/installing.html) for instructions for your system. Make sure you create an admin user, or using `root` is fine too.[^using-root]
 * Install nvm: Follow [this link](https://github.com/creationix/nvm#installation) for instructions.
 * Install latest LTS version of Node and npm: `nvm install --lts`
@@ -34,14 +40,14 @@ Here are the steps to follow:
 * Go to Query > Execute (All or Selection). It will run the script and create your new database
 
 !!! note ""
-    This will create a new database named **sema_core**. If you want to rename it, either use a tool like MySQL Workbench or make sure you edit the `create_schema.sql` file fromt this line: `CREATE SCHEMA sema_core;` before you Execute it.
+    This will create a new database named **sema_core**. If you want to rename it, either use a tool like MySQL Workbench or make sure you edit the `create_schema.sql` file from this line: `CREATE SCHEMA sema_core;` before you Execute it.
 
 ### Populating the required tables
 
 Now that the database is created, let's populate some tables in there. Feel free to change the values to what you want, except where it's mentioned to keep them as is.
 
 * Let's start by populating the MySQL views necessary:
-    * Still in MySQL Workbench, using the same steps above, select the `customer_details_view.sql` located in the `database` folder and run it.
+    * Still in MySQL Workbench, using the same steps above, select the `customer_details_view.sql` located in the current directory and run it.
     * Then do the same for the `receipt_details_view.sql` file.
 * Let's add a role
 ``` sql
@@ -139,7 +145,7 @@ VALUES (2, 1, 1, 2, '4000.00', 'UGX', '2000.00');
 
 Your database is now ready.
 
-To learn more about the database schema, please [click here](the-database-schema.md).
+<!-- To learn more about the database schema, please [click here](the-database-schema.md). -->
 
 ## The REST API Server
 
@@ -149,8 +155,7 @@ Let's move on to the REST API.
 
 From this point of this tutorial, here's what you'll need to follow along:
 
-* Create a new root directory to contain the whole project: `mkdir sema`
-* Move into the root directory: `cd sema`
+* Assuming you are currently in the `sema-database` directory, move back into the root directory: `cd ..`
 * Create a new repository by forking the official REST API repo through Github: Follow [this link](https://help.github.com/articles/fork-a-repo/) for instructions. Link to the repo: https://github.com/untapped-inc/sema-core
 * Clone your new repository to a local directory: `git clone https://github.com/YOUR-USERNAME/sema-core.git` - Make sure to change ==YOUR-USERNAME== to your Github username or the one you chose to fork the repo for
 * Move into the root directory of the REST API: `cd sema-core`
@@ -204,7 +209,7 @@ The version number may vary.
 !!! note
     The clients are configured to access the server on port 3001.
 
-To learn more about the REST API server, please [click here](rest-api/overview.md).
+<!-- To learn more about the REST API server, please [click here](rest-api/overview.md). -->
 
 ## The Back Office Web Client
 
@@ -234,7 +239,7 @@ Notice the port number: 3000
 
 Go to the above link and test the client by logging in with the user credentials you created during the [database setup](#populating-the-required-tables).
 
-To learn more about the back office, please [click here](back-office/overview.md).
+<!-- To learn more about the back office, please [click here](back-office/overview.md). -->
 
 ## The POS Mobile Client
 
