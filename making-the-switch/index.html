@@ -13,7 +13,7 @@
         <meta name="description" content="System for Emerging Market Analytics">
       
       
-        <link rel="canonical" href="https://untapped-inc.github.io/sema-docs/staying-in-harmony/">
+        <link rel="canonical" href="https://untapped-inc.github.io/sema-docs/making-the-switch/">
       
       
         <meta name="author" content="Untapped, Inc.">
@@ -42,7 +42,7 @@
     
     
       
-        <title>Keeping your fork up to date - SEMA Documentation</title>
+        <title>Making the Switch - SEMA Documentation</title>
       
     
     
@@ -102,7 +102,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#staying-in-harmony-lets-not-walk-over-each-other" tabindex="1" class="md-skip">
+      <a href="#making-the-switch-moving-your-sema-instance-to-the-new-architecture" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -128,7 +128,7 @@
                 SEMA Documentation
               </span>
               <span class="md-header-nav__topic">
-                Keeping your fork up to date
+                Making the Switch
               </span>
             
           
@@ -267,11 +267,105 @@
       
       
 
+  
 
-  <li class="md-nav__item">
-    <a href="../making-the-switch/" title="Making the Switch" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Making the Switch
+      </label>
+    
+    <a href="./" title="Making the Switch" class="md-nav__link md-nav__link--active">
       Making the Switch
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-development" title="1. Development" class="md-nav__link">
+    1. Development
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-database" title="The Database" class="md-nav__link">
+    The Database
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-rest-api" title="The REST API" class="md-nav__link">
+    The REST API
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-back-office-web-client" title="The Back Office Web Client" class="md-nav__link">
+    The Back Office Web Client
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-pos-mobile-client" title="The POS Mobile Client" class="md-nav__link">
+    The POS Mobile Client
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-documentation" title="The Documentation" class="md-nav__link">
+    The Documentation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-deployment" title="2. Deployment" class="md-nav__link">
+    2. Deployment
+  </a>
+  
+</li>
+      
+      
+      
+      
+        
+      
+      
+        <li class="md-nav__item">
+          <a href="#__comments" title="Comments" class="md-nav__link md-nav__link--active">
+            Comments
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
     
@@ -303,64 +397,11 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Keeping your fork up to date
-      </label>
-    
-    <a href="./" title="Keeping your fork up to date" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../staying-in-harmony/" title="Keeping your fork up to date" class="md-nav__link">
       Keeping your fork up to date
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#fetch-from-upstream-remote" title="Fetch from upstream remote" class="md-nav__link">
-    Fetch from upstream remote
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#checkout-your-master-branch-and-merge-upstream" title="Checkout your master branch and merge upstream" class="md-nav__link">
-    Checkout your master branch and merge upstream
-  </a>
-  
-</li>
-      
-      
-      
-      
-        
-      
-      
-        <li class="md-nav__item">
-          <a href="#__comments" title="Comments" class="md-nav__link md-nav__link--active">
-            Comments
-          </a>
-        </li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
     
@@ -481,15 +522,56 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#fetch-from-upstream-remote" title="Fetch from upstream remote" class="md-nav__link">
-    Fetch from upstream remote
+  <a href="#1-development" title="1. Development" class="md-nav__link">
+    1. Development
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-database" title="The Database" class="md-nav__link">
+    The Database
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-rest-api" title="The REST API" class="md-nav__link">
+    The REST API
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-back-office-web-client" title="The Back Office Web Client" class="md-nav__link">
+    The Back Office Web Client
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-pos-mobile-client" title="The POS Mobile Client" class="md-nav__link">
+    The POS Mobile Client
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-documentation" title="The Documentation" class="md-nav__link">
+    The Documentation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#checkout-your-master-branch-and-merge-upstream" title="Checkout your master branch and merge upstream" class="md-nav__link">
-    Checkout your master branch and merge upstream
+  <a href="#2-deployment" title="2. Deployment" class="md-nav__link">
+    2. Deployment
   </a>
   
 </li>
@@ -518,71 +600,64 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/untapped-inc/sema-docs/edit/master/docs/staying-in-harmony.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/untapped-inc/sema-docs/edit/master/docs/making-the-switch.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="staying-in-harmony-lets-not-walk-over-each-other">Staying in harmony <small>Let's not walk over each other</small><a class="headerlink" href="#staying-in-harmony-lets-not-walk-over-each-other" title="Permanent link">&para;</a></h1>
-<p>This section is for those who decide to customize their version of SEMA but still want to receive particular updates from one of our repositories without losing their changes in the long run.</p>
-<p>This section assumes you already have <a href="../getting-started/">a version of SEMA running in development mode</a> and <a href="../deploying-to-production/">one running in production mode</a>.</p>
-<p>We'll also assume that:</p>
-<ul>
-<li>You've FORKED the main repo</li>
-<li>You've Customized your POS app by changing the name, the logos, etc...</li>
-<li>You've added your own features to one or more parts of the system</li>
-</ul>
-<p>It's all fun and games, until you notice, from one of our release notes, that we added a new feature that you like.</p>
-<p>What do you do now?</p>
-<p>Your first guess would be to use <code class="codehilite">git pull upstream master</code>, but that's going to blow up your old changes and will annoy you with conflicts that don't even relate to the commit(s) that implement(s) the stuff(s) you like.</p>
-<p>Keep reading if you want to selectively merge modifications/updates from our repos to yours.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>We will be using the POS mobile client repo for this tutorial. However, the instructions apply to all of our repos.</p>
+                <h1 id="making-the-switch-moving-your-sema-instance-to-the-new-architecture">Making the switch <small>Moving your SEMA instance to the new architecture</small><a class="headerlink" href="#making-the-switch-moving-your-sema-instance-to-the-new-architecture" title="Permanent link">&para;</a></h1>
+<div class="admonition warning">
+<p class="admonition-title">Temporary Section</p>
+<p>This section is temporary. It will be deleted by April 1st 2019.</p>
 </div>
-<h2 id="fetch-from-upstream-remote">Fetch from upstream remote<a class="headerlink" href="#fetch-from-upstream-remote" title="Permanent link">&para;</a></h2>
-<p>To get started, you'll want to make sure you keep your fork up to date by tracking the official "upstream" repo that you forked. To do this, you'll need to add a remote:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>git remote add upstream https://github.com/untapped-inc/sema-pos-mobile.git
+<p>This section is for those who are willing to move their instance of SEMA to the new architecture introduced on March 2019.</p>
+<p>Unfortunately, we got rid of the main repository, so we will be losing all the previous commits. We archived the old architecture repo - it's now called <code class="codehilite">sema-core-archived</code> - and we strongly suggest you to do the same for yours.</p>
+<div class="admonition info">
+<p>We really tried our best to reduce the size of the original repository after replacing its content by those of the POS mobile client. Nothing really worked.</p>
+<p>Feel free to experience it yourself by cloning <a href="https://github.com/untapped-inc/sema-core-archived" target="_blank">this repository</a>. And that's only after we've tried to save space.</p>
+</div>
+<p>Let's get to it.</p>
+<h2 id="1-development">1. Development<a class="headerlink" href="#1-development" title="Permanent link">&para;</a></h2>
+<p>Let's make sure our development instance is running fine first.</p>
+<h3 id="the-database">The Database<a class="headerlink" href="#the-database" title="Permanent link">&para;</a></h3>
+<p>The database structure file and related documents are all located at <a href="https://github.com/untapped-inc/sema-database" target="_blank">https://github.com/untapped-inc/sema-database</a>.</p>
+<p>Simply fork that repo and go to the <a href="../getting-started/#the-database">Getting Started</a> sub-section on how to use it.</p>
+<p>For those who have customized this component, all you need to do after forking is to replace the content of your fork with the content of your previous <code class="codehilite">database</code> directory.</p>
+<h3 id="the-rest-api">The REST API<a class="headerlink" href="#the-rest-api" title="Permanent link">&para;</a></h3>
+<p>The REST API, which is the core of SEMA, has been moved to <a href="https://github.com/untapped-inc/sema-core" target="_blank">https://github.com/untapped-inc/sema-core</a>.</p>
+<p>Now you can fork that repo and go to the <a href="../getting-started/#the-rest-api-server">Getting Started</a> sub-section on how to run it.</p>
+<p>For those who have customized this component, all you need to do after forking is to replace the content of your fork with the content of your previous <code class="codehilite">report_server</code> directory. The only difference in their source is the <code class="codehilite"><span class="na">.example-env</span></code> file, which used to be in the root directory of the old architecture. <strong>So make sure you leave this file in there</strong>.</p>
+<h3 id="the-back-office-web-client">The Back Office Web Client<a class="headerlink" href="#the-back-office-web-client" title="Permanent link">&para;</a></h3>
+<p>The back office web client is the new merge between the admin and the reports dashboards. It's now located at <a href="https://github.com/untapped-inc/sema-back-office-web" target="_blank">https://github.com/untapped-inc/sema-back-office-web</a>.</p>
+<p>Simply fork that repo and go to the <a href="../getting-started/#the-back-office-web-client">Getting Started</a> sub-section on how to run it.</p>
+<p>For those who have customized this component, all you need to do after forking is to replace the content of your fork with the content of your previous <code class="codehilite">sema-backoffice-web</code> directory.</p>
+<h3 id="the-pos-mobile-client">The POS Mobile Client<a class="headerlink" href="#the-pos-mobile-client" title="Permanent link">&para;</a></h3>
+<p>The POS mobile client is now located at <a href="https://github.com/untapped-inc/sema-pos-mobile" target="_blank">https://github.com/untapped-inc/sema-pos-mobile</a>.</p>
+<p>Simply fork that repo and go to the <a href="../getting-started/#the-pos-mobile-client">Getting Started</a> sub-section on how to run it.</p>
+<p>For those who have customized this component, all you need to do after forking is to replace the content of your fork with the content of your previous <code class="codehilite">mobile_client</code> directory. The only difference in their source is the <code class="codehilite"><span class="na">.babelrc</span></code> file. Without this new version of it, you'll get an error when trying to build the app. <strong>So make sure you leave this file in there</strong>.</p>
+<h3 id="the-documentation">The Documentation<a class="headerlink" href="#the-documentation" title="Permanent link">&para;</a></h3>
+<p>The source code of this documentation website. It has always been over at <a href="https://github.com/untapped-inc/sema-docs" target="_blank">https://github.com/untapped-inc/sema-docs</a></p>
+<p>Feel free to fork it if you're planning on documenting your own tools and features.</p>
+<p>Now, all you need to do is to stage the changes, commit and push to each of the repositories. Done.</p>
+<h2 id="2-deployment">2. Deployment<a class="headerlink" href="#2-deployment" title="Permanent link">&para;</a></h2>
+<p>Now that you're good locally. Let's see what needs to be done on the cloud to accommodate.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>There's a high chance for things to break here, so make sure you're not doing this during production at the site(s).</p>
+</div>
+<p>From the SSH server you use for production, go ahead and start the tutorial over at the <a href="../deploying-to-production/#the-back-office-web-client">Deploying to Production</a> section. Yes, even tho there's already an instance of SEMA running on there. It was updated to accommodate the new structure.</p>
+<p>Skip the The Database sub-section because you've probably done it already, just make sure you take care of all the prerequisites. The first change you'll encounter is the creation of the <code class="codehilite">sema</code> directory in the <a href="../deploying-to-production/#prerequisites-3">prerequesites of the back office web client</a></p>
+<p>You are most likely to get stuck during <a href="../deploying-to-production/#serving-the-rest-api">deployment of the REST API</a> because there's probably already an instance running. So go ahead and run this command:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>pm2 ls
 </pre></div>
 </td></tr></table>
 
-<p>Verify the new remote named 'upstream'</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>git remote -v
+<p>It will display a list of processes running. Using the ID of the SEMA process, stop and delete/kill it with:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>pm2 del PROCESS_ID
 </pre></div>
 </td></tr></table>
 
-<p>Whenever you want to update your fork with the latest upstream changes, you'll need to first fetch the upstream repo's branches and latest commits to bring them into your repository:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>git fetch -v upstream
-</pre></div>
-</td></tr></table>
-
-<p><code class="codehilite">-v</code> makes sure it outputs the fetched branches (verbose).</p>
-<h2 id="checkout-your-master-branch-and-merge-upstream">Checkout your master branch and merge upstream<a class="headerlink" href="#checkout-your-master-branch-and-merge-upstream" title="Permanent link">&para;</a></h2>
-<p>Now, checkout your own master branch and squash and merge the upstream repo's master branch. We're merging the master branch here because this is the branch that Untapped releases latest features on. You could have used another one for your own purposes:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>git checkout master
-</pre></div>
-</td></tr></table>
-
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>git merge --squash upstream/master
-</pre></div>
-</td></tr></table>
-
-<p>If there are no unique commits on the local master branch, git will simply perform a fast-forward.</p>
-<p>However, if you have been making changes on master - or already merged another branch, you may have to deal with conflicts.<br>When doing so, either through a graphical user interface or the command line, make sure to pick the right modification source for the conflict:</p>
-<ul>
-<li><code class="codehilite">Ours</code>/<code class="codehilite">HEAD</code> - your changes</li>
-<li><code class="codehilite">Theirs</code>/<code class="codehilite">Incoming Changes</code> - the changes from Untapped</li>
-</ul>
-<p>Then you can stage the changes and make a single commit to complete the merge:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>git add .
-</pre></div>
-</td></tr></table>
-
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>git commit -m &quot;Merge this awesome feature from Untapped&quot;
-</pre></div>
-</td></tr></table>
-
-<p>Now, your local master branch is up-to-date with what you needed from upstream while retaining your own changes.</p>
-<p>Feel free to leave a comment down below.</p>
-<!-- or simply ping us in the <a href="https://gitter.im/sema-dev/" target="_blank">Gitter community</a>. -->
+<p>Now go ahead and continue with the tutorial and you should be good to go.</p>
+<p>Since the admin and the reports dashboards have been merged, if you had an admin dashboard running on your old architecture, make sure you kill its process too using the same method used above.</p>
+<p>We hope this section was clear enough, please leave a comment below or contact us directly for any questions.</p>
                 
                   
                 
@@ -597,9 +672,9 @@
   <div id="disqus_thread"></div>
   <script>
     var disqus_config = function () {
-      this.page.url = "https://untapped-inc.github.io/sema-docs/staying-in-harmony/";
+      this.page.url = "https://untapped-inc.github.io/sema-docs/making-the-switch/";
       this.page.identifier =
-        "staying-in-harmony/";
+        "making-the-switch/";
     };
     (function() {
       var d = document, s = d.createElement("script");
@@ -621,7 +696,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../deploying-to-production/" title="Deploying to Production" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../architecture-and-components-overview/" title="Architecture and Components Overview" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -630,19 +705,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Deploying to Production
+                Architecture and Components Overview
               </span>
             </div>
           </a>
         
         
-          <a href="../license/" title="License" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../getting-started/" title="Getting Started" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                License
+                Getting Started
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
