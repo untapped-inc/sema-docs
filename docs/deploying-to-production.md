@@ -176,10 +176,6 @@ mysqk -uUSERNAME -p
 
 Now that your database is ready for production use, follow the instructions [over there](getting-started.md) to populate the basic data in its tables.
 
-## Configurations
-
-Let's now setup the configuration file, follow the instructions in [this sub-section](getting-started.md#configurations_1).
-
 ## The Back Office Web Client
 
 ### Prerequisites 3
@@ -223,6 +219,10 @@ From this point of this tutorial, here's what you'll need to follow along:
 * Clone your new repository to a local directory: `git clone https://github.com/YOUR-USERNAME/sema-core.git` - Make sure to change ==YOUR-USERNAME== to your Github username or the one you chose to fork the repo for
 * Move into the root directory of the REST API: `cd sema-core`
 * From this point on, we expect that you are in the root directory of the REST API
+
+### Configurations
+
+Let's now setup the configuration file, follow the instructions in [this sub-section](getting-started.md#configurations_1).
 
 ### Serving the REST API
 
@@ -302,16 +302,13 @@ curl http://YOUR-SERVER-IP-ADDRESS/untapped/health-check
 
 From this point of this tutorial, here's what you'll need to follow along:
 
-* Assuming you are currently in the `sema-core` directory, move back into the root directory: `cd ..`
+* Assuming you are currently on your SSH server in the `sema-core` directory, leave it and get back on your personal computer. This sub-section is to be followed from your development machine, not the cloud
 * Create a new repository by forking the official POS mobile client repo through Github: Follow [this link](https://help.github.com/articles/fork-a-repo/) for instructions. Link to the repo: https://github.com/untapped-inc/sema-pos-mobile
 * Clone your new repository to a local directory: `git clone https://github.com/YOUR-USERNAME/sema-pos-mobile.git` - Make sure to change ==YOUR-USERNAME== to your Github username or the one you chose to fork the repo for
 * Move into the root directory of the POS mobile client: `cd sema-pos-mobile`
 * From this point on, we expect that you are in the root directory of the POS mobile client
 
 We will now build a customized version of the POS app.
-
-!!! info ""
-    For this part, do not do it on the SSH server. Do it locally on your development machine.
 
 ### Customizing
 
@@ -424,6 +421,14 @@ And you should get a `BUILD_SUCCESSFUL` message at the end of the script output 
 
 You now have an APK file of your customized POS app.
 
+!!! warning "modified:   android/gradle.properties"
+    You'll notice the file `android/gradle.properties` has been modified when you run `git status`.
+    It has been modified by the `build_sema_apk.sh` script. Make sure you ignore this before staging and committing any changes:
+    
+    
+        git checkout -- android/gradle.properties
+    
+
 !!! info ""
     The APK file is located at `android/app/build/outputs/apk/release`. It's named `app-release.apk`. Feel free to rename this file however you like.
 
@@ -433,11 +438,11 @@ You now have an APK file of your customized POS app.
 
 And that's it! You now have the whole platform running in production. Neat.
 
-## Where to go From Here?
+<!-- ## Where to go From Here?
 
 Now that you have SEMA running successfully for your SWE. Here are some interesting links:
 
-* <a href="https://gitter.im/sema-dev/" target="_blank">Join the community chat</a> so you can have 24/7 support for free from both the community and the core developers of SEMA.
+* <a href="https://gitter.im/sema-dev/" target="_blank">Join the community chat</a> so you can have 24/7 support for free from both the community and the core developers of SEMA. -->
 <!-- * [The Database Schema](the-database-schema.md) -->
 <!-- * [The REST API Server](rest-api/overview.md) -->
 <!-- * [The Back Office Client](back-office/overview.md) -->
