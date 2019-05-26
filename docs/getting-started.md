@@ -130,8 +130,6 @@ INSERT INTO `product` (`id`, `name`, `sku`, `description`, `category_id`, `price
 VALUES (1, '5.0L bottle', 'MD5G', '5 Liter water bottle', 1, 4000.00, 'UGX', 5, 'liters', 2000.00, 'PRODUCT_BASE64_ENCODED_IMAGE');
 ```
 !!! note
-    As of now, you must have at least one product with a `unit_measure` value of `liters`.
-
     Notice the `PRODUCT_BASE64_ENCODED_IMAGE`. It's the image that shows up for the product. We use base64 encoded images instead of PNG files. To get your own base64 version of your product image, you can use an online tool for that. We personally like to use [this tool](https://www.base64-image.de/).
 
     Once you get the base64 encoded image from the tool, simply replace the ==PRODUCT_BASE64_ENCODED_IMAGE== placeholder with it.
