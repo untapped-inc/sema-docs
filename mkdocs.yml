@@ -33,7 +33,7 @@ markdown_extensions:
 nav:
   - Introduction: index.md
   - Architecture and Components Overview: architecture-and-components-overview.md
-  - Making the Switch: making-the-switch.md
+  # - Making the Switch: making-the-switch.md
   - Getting Started: getting-started.md
   - Deploying to Production: deploying-to-production.md
   - Keeping your fork up to date: staying-in-harmony.md
